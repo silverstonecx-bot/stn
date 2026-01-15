@@ -2237,3 +2237,54 @@
 
 
     </div>
+
+
+<script>
+(() => {
+  function parseYMD(str) {
+    const s = String(str || "").trim();
+    const m = s.match(/^(\d{4})[\/-](\d{2})[\/-](\d{2})$/);
+    if (!m) return null;
+
+    const y = +m[1], mo = +m[2], d = +m[3];
+    const dt = new Date(y, mo - 1, d);
+
+    // validate real date (prevents 2026/02/31 etc.)
+    if (dt.getFullYear() !== y || dt.getMonth() !== (mo - 1) || dt.getDate() !== d) return null;
+    return dt;
+  }
+
+  function isExpired(expiryStr) {
+    const exp = parseYMD(expiryStr);
+    if (!exp) return false;
+
+    // date-only compare; valid THROUGH the expiry date (inclusive)
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const expiry = new Date(exp.getFullYear(), exp.getMonth(), exp.getDate());
+    return today > expiry; // expired if today is after expiry date
+  }
+
+  function showExpiredScreen() {
+    document.body.innerHTML = `
+      <div class="container p-0">
+        <div class="card p-lg-4">
+          <div class="alert alert-danger">
+            • حدث خطأ غير متوقع<br>
+            • الرقم المرجعي للخطأ: <b>F638997675371411651 </b>
+          </div>
+        </div>
+      </div>
+    `;
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const fld = document.getElementById("fldGregExpiry");
+    const expiryVal = fld ? fld.value : "";
+    if (isExpired(expiryVal)) showExpiredScreen();
+  });
+})();
+</script>
+
