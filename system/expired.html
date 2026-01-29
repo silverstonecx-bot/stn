@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>الشهادة الصحية غير سارية</title>
+
+  <link rel="icon" type="image/x-icon" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.ico">
+  <link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/app.min.css" rel="stylesheet" />
+  <link href="https://apps.balady.gov.sa/BALADYCDN/Content/unified_identity_assets/css/app.min.css" rel="stylesheet" />
+
+  <style>
+    body { background:#f5f6f7; }
+    .wrap { max-width: 900px; margin: 24px auto; padding: 0 12px; }
+    .card { border-radius: 14px; }
+    .brandbar { background:#fff; border-bottom:1px solid #eee; }
+    .brandbar .inner { max-width: 1100px; margin: 0 auto; padding: 10px 12px; display:flex; align-items:center; gap:12px; }
+    .brandbar img { height: 34px; }
+    .muted { color:#6c757d; }
+  </style>
+</head>
+
+<body>
+  <div class="brandbar">
+    <div class="inner">
+      <a href="https://balady.gov.sa/ar" target="_blank" rel="noopener">
+        <img src="https://balady.gov.sa/themes/custom/balady_new/logo.svg" alt="بلدي" />
+      </a>
+      <div class="muted">إشعار حالة الشهادة</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card p-3 p-md-4">
+      <div class="alert alert-danger mb-3">
+        <div style="font-weight:700;">• الشهادة الصحية غير سارية</div>
+        <div>• الرقم المرجعي للخطأ: <b id="refBox">—</b></div>
+      </div>
+
+      <div class="alert alert-info mb-4">
+        تنبيه: الرجاء تجديد الرخصة قبل انتهاء موعدها.
+      </div>
+
+      <div class="d-flex flex-wrap gap-2">
+        <!-- change this link to your renew page -->
+        <a class="btn btn-success" href="https://balady.gov.sa/ar" target="_blank" rel="noopener">الانتقال للتجديد</a>
+
+        <!-- go back to your main page -->
+        <a class="btn btn-outline-secondary" href="index.html">العودة للصفحة الرئيسية</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Read ?ref=XXXXX
+    const p = new URLSearchParams(location.search);
+    const ref = p.get("ref");
+    document.getElementById("refBox").textContent = ref ? ref : "—";
+  </script>
+</body>
+</html>
