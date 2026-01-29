@@ -1,0 +1,1947 @@
+<html lang="ar" dir="rtl">
+    <head>
+        <title>إصدار شهادة صحية</title>
+        <link rel="icon" type="image/x-icon" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.ico">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="content">
+        <meta name="author" content="content">
+        <meta name="robots" content="noindex">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.png">
+        <link rel="icon" type="image/x-icon" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.ico">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/icons/fontawesome5/css/all.css" rel="stylesheet" type="text/css">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/select2/css/select2.min.css" rel="stylesheet">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/app.min.css" rel="stylesheet" type="text/css">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/unified_identity_assets/css/app.min.css" rel="stylesheet" type="text/css">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.picker.css" rel="stylesheet">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/Validation.css" rel="stylesheet">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/jquery.dataTables.min.css" rel="stylesheet">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/Style.css" rel="stylesheet">
+        <link href="https://apps.balady.gov.sa/BALADYCDN/Content/style.css?v=1" rel="stylesheet" type="text/css">
+        <script src="https://apps.balady.gov.sa/BALADYCDN/Content/Support.js?v=849784"></script>
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-69XYTDF1T2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-69XYTDF1T2');
+        </script>
+        <link rel="stylesheet" type="text/css" href="https://apps.balady.gov.sa/BALADYCDN/Content/enhancement.css?v=849784">
+        <style>
+            .swal2-popup.swal2-toast {
+                box-sizing: border-box;
+                grid-column: 1/4 !important;
+                grid-row: 1/4 !important;
+                grid-template-columns: min-content auto min-content;
+                padding: 1em;
+                overflow-y: hidden;
+                background: #fff;
+                box-shadow: 0 0 1px rgba(0,0,0,.075),0 1px 2px rgba(0,0,0,.075),1px 2px 4px rgba(0,0,0,.075),1px 3px 8px rgba(0,0,0,.075),2px 4px 16px rgba(0,0,0,.075);
+                pointer-events: all
+            }
+
+            .swal2-popup.swal2-toast>* {
+                grid-column: 2
+            }
+
+            .swal2-popup.swal2-toast .swal2-title {
+                margin: .5em 1em;
+                padding: 0;
+                font-size: 1em;
+                text-align: initial
+            }
+
+            .swal2-popup.swal2-toast .swal2-loading {
+                justify-content: center
+            }
+
+            .swal2-popup.swal2-toast .swal2-input {
+                height: 2em;
+                margin: .5em;
+                font-size: 1em
+            }
+
+            .swal2-popup.swal2-toast .swal2-validation-message {
+                font-size: 1em
+            }
+
+            .swal2-popup.swal2-toast .swal2-footer {
+                margin: .5em 0 0;
+                padding: .5em 0 0;
+                font-size: .8em
+            }
+
+            .swal2-popup.swal2-toast .swal2-close {
+                grid-column: 3/3;
+                grid-row: 1/99;
+                align-self: center;
+                width: .8em;
+                height: .8em;
+                margin: 0;
+                font-size: 2em
+            }
+
+            .swal2-popup.swal2-toast .swal2-html-container {
+                margin: .5em 1em;
+                padding: 0;
+                overflow: initial;
+                font-size: 1em;
+                text-align: initial
+            }
+
+            .swal2-popup.swal2-toast .swal2-html-container:empty {
+                padding: 0
+            }
+
+            .swal2-popup.swal2-toast .swal2-loader {
+                grid-column: 1;
+                grid-row: 1/99;
+                align-self: center;
+                width: 2em;
+                height: 2em;
+                margin: .25em
+            }
+
+            .swal2-popup.swal2-toast .swal2-icon {
+                grid-column: 1;
+                grid-row: 1/99;
+                align-self: center;
+                width: 2em;
+                min-width: 2em;
+                height: 2em;
+                margin: 0 .5em 0 0
+            }
+
+            .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+                display: flex;
+                align-items: center;
+                font-size: 1.8em;
+                font-weight: bold
+            }
+
+            .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+                width: 2em;
+                height: 2em
+            }
+
+            .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+                top: .875em;
+                width: 1.375em
+            }
+
+            .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+                left: .3125em
+            }
+
+            .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+                right: .3125em
+            }
+
+            .swal2-popup.swal2-toast .swal2-actions {
+                justify-content: flex-start;
+                height: auto;
+                margin: 0;
+                margin-top: .5em;
+                padding: 0 .5em
+            }
+
+            .swal2-popup.swal2-toast .swal2-styled {
+                margin: .25em .5em;
+                padding: .4em .6em;
+                font-size: 1em
+            }
+
+            .swal2-popup.swal2-toast .swal2-success {
+                border-color: #a5dc86
+            }
+
+            .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {
+                position: absolute;
+                width: 1.6em;
+                height: 3em;
+                transform: rotate(45deg);
+                border-radius: 50%
+            }
+
+            .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {
+                top: -0.8em;
+                left: -0.5em;
+                transform: rotate(-45deg);
+                transform-origin: 2em 2em;
+                border-radius: 4em 0 0 4em
+            }
+
+            .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {
+                top: -0.25em;
+                left: .9375em;
+                transform-origin: 0 1.5em;
+                border-radius: 0 4em 4em 0
+            }
+
+            .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+                width: 2em;
+                height: 2em
+            }
+
+            .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+                top: 0;
+                left: .4375em;
+                width: .4375em;
+                height: 2.6875em
+            }
+
+            .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {
+                height: .3125em
+            }
+
+            .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {
+                top: 1.125em;
+                left: .1875em;
+                width: .75em
+            }
+
+            .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {
+                top: .9375em;
+                right: .1875em;
+                width: 1.375em
+            }
+
+            .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
+                animation: swal2-toast-animate-success-line-tip .75s
+            }
+
+            .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
+                animation: swal2-toast-animate-success-line-long .75s
+            }
+
+            .swal2-popup.swal2-toast.swal2-show {
+                animation: swal2-toast-show .5s
+            }
+
+            .swal2-popup.swal2-toast.swal2-hide {
+                animation: swal2-toast-hide .1s forwards
+            }
+
+            .swal2-container {
+                display: grid;
+                position: fixed;
+                z-index: 1060;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                box-sizing: border-box;
+                grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
+                grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);
+                height: 100%;
+                padding: .625em;
+                overflow-x: hidden;
+                transition: background-color .1s;
+                -webkit-overflow-scrolling: touch
+            }
+
+            .swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation {
+                background: rgba(0,0,0,.4)
+            }
+
+            .swal2-container.swal2-backdrop-hide {
+                background: rgba(0,0,0,0) !important
+            }
+
+            .swal2-container.swal2-top-start,.swal2-container.swal2-center-start,.swal2-container.swal2-bottom-start {
+                grid-template-columns: minmax(0, 1fr) auto auto
+            }
+
+            .swal2-container.swal2-top,.swal2-container.swal2-center,.swal2-container.swal2-bottom {
+                grid-template-columns: auto minmax(0, 1fr) auto
+            }
+
+            .swal2-container.swal2-top-end,.swal2-container.swal2-center-end,.swal2-container.swal2-bottom-end {
+                grid-template-columns: auto auto minmax(0, 1fr)
+            }
+
+            .swal2-container.swal2-top-start>.swal2-popup {
+                align-self: start
+            }
+
+            .swal2-container.swal2-top>.swal2-popup {
+                grid-column: 2;
+                align-self: start;
+                justify-self: center
+            }
+
+            .swal2-container.swal2-top-end>.swal2-popup,.swal2-container.swal2-top-right>.swal2-popup {
+                grid-column: 3;
+                align-self: start;
+                justify-self: end
+            }
+
+            .swal2-container.swal2-center-start>.swal2-popup,.swal2-container.swal2-center-left>.swal2-popup {
+                grid-row: 2;
+                align-self: center
+            }
+
+            .swal2-container.swal2-center>.swal2-popup {
+                grid-column: 2;
+                grid-row: 2;
+                align-self: center;
+                justify-self: center
+            }
+
+            .swal2-container.swal2-center-end>.swal2-popup,.swal2-container.swal2-center-right>.swal2-popup {
+                grid-column: 3;
+                grid-row: 2;
+                align-self: center;
+                justify-self: end
+            }
+
+            .swal2-container.swal2-bottom-start>.swal2-popup,.swal2-container.swal2-bottom-left>.swal2-popup {
+                grid-column: 1;
+                grid-row: 3;
+                align-self: end
+            }
+
+            .swal2-container.swal2-bottom>.swal2-popup {
+                grid-column: 2;
+                grid-row: 3;
+                justify-self: center;
+                align-self: end
+            }
+
+            .swal2-container.swal2-bottom-end>.swal2-popup,.swal2-container.swal2-bottom-right>.swal2-popup {
+                grid-column: 3;
+                grid-row: 3;
+                align-self: end;
+                justify-self: end
+            }
+
+            .swal2-container.swal2-grow-row>.swal2-popup,.swal2-container.swal2-grow-fullscreen>.swal2-popup {
+                grid-column: 1/4;
+                width: 100%
+            }
+
+            .swal2-container.swal2-grow-column>.swal2-popup,.swal2-container.swal2-grow-fullscreen>.swal2-popup {
+                grid-row: 1/4;
+                align-self: stretch
+            }
+
+            .swal2-container.swal2-no-transition {
+                transition: none !important
+            }
+
+            .swal2-popup {
+                display: none;
+                position: relative;
+                box-sizing: border-box;
+                grid-template-columns: minmax(0, 100%);
+                width: 32em;
+                max-width: 100%;
+                padding: 0 0 1.25em;
+                border: none;
+                border-radius: 5px;
+                background: #fff;
+                color: #545454;
+                font-family: inherit;
+                font-size: 1rem
+            }
+
+            .swal2-popup:focus {
+                outline: none
+            }
+
+            .swal2-popup.swal2-loading {
+                overflow-y: hidden
+            }
+
+            .swal2-title {
+                position: relative;
+                max-width: 100%;
+                margin: 0;
+                padding: .8em 1em 0;
+                color: inherit;
+                font-size: 1.875em;
+                font-weight: 600;
+                text-align: center;
+                text-transform: none;
+                word-wrap: break-word
+            }
+
+            .swal2-actions {
+                display: flex;
+                z-index: 1;
+                box-sizing: border-box;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+                margin: 1.25em auto 0;
+                padding: 0
+            }
+
+            .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+                opacity: .4
+            }
+
+            .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+            }
+
+            .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+            }
+
+            .swal2-loader {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                width: 2.2em;
+                height: 2.2em;
+                margin: 0 1.875em;
+                animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+                border-width: .25em;
+                border-style: solid;
+                border-radius: 100%;
+                border-color: #2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)
+            }
+
+            .swal2-styled {
+                margin: .3125em;
+                padding: .625em 1.1em;
+                transition: box-shadow .1s;
+                box-shadow: 0 0 0 3px rgba(0,0,0,0);
+                font-weight: 500
+            }
+
+            .swal2-styled:not([disabled]) {
+                cursor: pointer
+            }
+
+            .swal2-styled.swal2-confirm {
+                border: 0;
+                border-radius: .25em;
+                background: initial;
+                background-color: #7066e0;
+                color: #fff;
+                font-size: 1em
+            }
+
+            .swal2-styled.swal2-confirm:focus {
+                box-shadow: 0 0 0 3px rgba(112,102,224,.5)
+            }
+
+            .swal2-styled.swal2-deny {
+                border: 0;
+                border-radius: .25em;
+                background: initial;
+                background-color: #dc3741;
+                color: #fff;
+                font-size: 1em
+            }
+
+            .swal2-styled.swal2-deny:focus {
+                box-shadow: 0 0 0 3px rgba(220,55,65,.5)
+            }
+
+            .swal2-styled.swal2-cancel {
+                border: 0;
+                border-radius: .25em;
+                background: initial;
+                background-color: #6e7881;
+                color: #fff;
+                font-size: 1em
+            }
+
+            .swal2-styled.swal2-cancel:focus {
+                box-shadow: 0 0 0 3px rgba(110,120,129,.5)
+            }
+
+            .swal2-styled.swal2-default-outline:focus {
+                box-shadow: 0 0 0 3px rgba(100,150,200,.5)
+            }
+
+            .swal2-styled:focus {
+                outline: none
+            }
+
+            .swal2-styled::-moz-focus-inner {
+                border: 0
+            }
+
+            .swal2-footer {
+                justify-content: center;
+                margin: 1em 0 0;
+                padding: 1em 1em 0;
+                border-top: 1px solid #eee;
+                color: inherit;
+                font-size: 1em
+            }
+
+            .swal2-timer-progress-bar-container {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                grid-column: auto !important;
+                overflow: hidden;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px
+            }
+
+            .swal2-timer-progress-bar {
+                width: 100%;
+                height: .25em;
+                background: rgba(0,0,0,.2)
+            }
+
+            .swal2-image {
+                max-width: 100%;
+                margin: 2em auto 1em
+            }
+
+            .swal2-close {
+                z-index: 2;
+                align-items: center;
+                justify-content: center;
+                width: 1.2em;
+                height: 1.2em;
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: -1.2em;
+                padding: 0;
+                overflow: hidden;
+                transition: color .1s,box-shadow .1s;
+                border: none;
+                border-radius: 5px;
+                background: rgba(0,0,0,0);
+                color: #ccc;
+                font-family: serif;
+                font-family: monospace;
+                font-size: 2.5em;
+                cursor: pointer;
+                justify-self: end
+            }
+
+            .swal2-close:hover {
+                transform: none;
+                background: rgba(0,0,0,0);
+                color: #f27474
+            }
+
+            .swal2-close:focus {
+                outline: none;
+                box-shadow: inset 0 0 0 3px rgba(100,150,200,.5)
+            }
+
+            .swal2-close::-moz-focus-inner {
+                border: 0
+            }
+
+            .swal2-html-container {
+                z-index: 1;
+                justify-content: center;
+                margin: 1em 1.6em .3em;
+                padding: 0;
+                overflow: auto;
+                color: inherit;
+                font-size: 1.125em;
+                font-weight: normal;
+                line-height: normal;
+                text-align: center;
+                word-wrap: break-word;
+                word-break: break-word
+            }
+
+            .swal2-input,.swal2-file,.swal2-textarea,.swal2-select,.swal2-radio,.swal2-checkbox {
+                margin: 1em 2em 3px
+            }
+
+            .swal2-input,.swal2-file,.swal2-textarea {
+                box-sizing: border-box;
+                width: auto;
+                transition: border-color .1s,box-shadow .1s;
+                border: 1px solid #d9d9d9;
+                border-radius: .1875em;
+                background: rgba(0,0,0,0);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px rgba(0,0,0,0);
+                color: inherit;
+                font-size: 1.125em
+            }
+
+            .swal2-input.swal2-inputerror,.swal2-file.swal2-inputerror,.swal2-textarea.swal2-inputerror {
+                border-color: #f27474 !important;
+                box-shadow: 0 0 2px #f27474 !important
+            }
+
+            .swal2-input:focus,.swal2-file:focus,.swal2-textarea:focus {
+                border: 1px solid #b4dbed;
+                outline: none;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px rgba(100,150,200,.5)
+            }
+
+            .swal2-input::placeholder,.swal2-file::placeholder,.swal2-textarea::placeholder {
+                color: #ccc
+            }
+
+            .swal2-range {
+                margin: 1em 2em 3px;
+                background: #fff
+            }
+
+            .swal2-range input {
+                width: 80%
+            }
+
+            .swal2-range output {
+                width: 20%;
+                color: inherit;
+                font-weight: 600;
+                text-align: center
+            }
+
+            .swal2-range input,.swal2-range output {
+                height: 2.625em;
+                padding: 0;
+                font-size: 1.125em;
+                line-height: 2.625em
+            }
+
+            .swal2-input {
+                height: 2.625em;
+                padding: 0 .75em
+            }
+
+            .swal2-file {
+                width: 75%;
+                margin-right: auto;
+                margin-left: auto;
+                background: rgba(0,0,0,0);
+                font-size: 1.125em
+            }
+
+            .swal2-textarea {
+                height: 6.75em;
+                padding: .75em
+            }
+
+            .swal2-select {
+                min-width: 50%;
+                max-width: 100%;
+                padding: .375em .625em;
+                background: rgba(0,0,0,0);
+                color: inherit;
+                font-size: 1.125em
+            }
+
+            .swal2-radio,.swal2-checkbox {
+                align-items: center;
+                justify-content: center;
+                background: #fff;
+                color: inherit
+            }
+
+            .swal2-radio label,.swal2-checkbox label {
+                margin: 0 .6em;
+                font-size: 1.125em
+            }
+
+            .swal2-radio input,.swal2-checkbox input {
+                flex-shrink: 0;
+                margin: 0 .4em
+            }
+
+            .swal2-input-label {
+                display: flex;
+                justify-content: center;
+                margin: 1em auto 0
+            }
+
+            .swal2-validation-message {
+                align-items: center;
+                justify-content: center;
+                margin: 1em 0 0;
+                padding: .625em;
+                overflow: hidden;
+                background: #f0f0f0;
+                color: #666;
+                font-size: 1em;
+                font-weight: 300
+            }
+
+            .swal2-validation-message::before {
+                content: "!";
+                display: inline-block;
+                width: 1.5em;
+                min-width: 1.5em;
+                height: 1.5em;
+                margin: 0 .625em;
+                border-radius: 50%;
+                background-color: #f27474;
+                color: #fff;
+                font-weight: 600;
+                line-height: 1.5em;
+                text-align: center
+            }
+
+            .swal2-icon {
+                position: relative;
+                box-sizing: content-box;
+                justify-content: center;
+                width: 5em;
+                height: 5em;
+                margin: 2.5em auto .6em;
+                border: 0.25em solid rgba(0,0,0,0);
+                border-radius: 50%;
+                border-color: #000;
+                font-family: inherit;
+                line-height: 5em;
+                cursor: default;
+                user-select: none
+            }
+
+            .swal2-icon .swal2-icon-content {
+                display: flex;
+                align-items: center;
+                font-size: 3.75em
+            }
+
+            .swal2-icon.swal2-error {
+                border-color: #f27474;
+                color: #f27474
+            }
+
+            .swal2-icon.swal2-error .swal2-x-mark {
+                position: relative;
+                flex-grow: 1
+            }
+
+            .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+                display: block;
+                position: absolute;
+                top: 2.3125em;
+                width: 2.9375em;
+                height: .3125em;
+                border-radius: .125em;
+                background-color: #f27474
+            }
+
+            .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+                left: 1.0625em;
+                transform: rotate(45deg)
+            }
+
+            .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+                right: 1em;
+                transform: rotate(-45deg)
+            }
+
+            .swal2-icon.swal2-error.swal2-icon-show {
+                animation: swal2-animate-error-icon .5s
+            }
+
+            .swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark {
+                animation: swal2-animate-error-x-mark .5s
+            }
+
+            .swal2-icon.swal2-warning {
+                border-color: #facea8;
+                color: #f8bb86
+            }
+
+            .swal2-icon.swal2-warning.swal2-icon-show {
+                animation: swal2-animate-error-icon .5s
+            }
+
+            .swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content {
+                animation: swal2-animate-i-mark .5s
+            }
+
+            .swal2-icon.swal2-info {
+                border-color: #9de0f6;
+                color: #3fc3ee
+            }
+
+            .swal2-icon.swal2-info.swal2-icon-show {
+                animation: swal2-animate-error-icon .5s
+            }
+
+            .swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content {
+                animation: swal2-animate-i-mark .8s
+            }
+
+            .swal2-icon.swal2-question {
+                border-color: #c9dae1;
+                color: #87adbd
+            }
+
+            .swal2-icon.swal2-question.swal2-icon-show {
+                animation: swal2-animate-error-icon .5s
+            }
+
+            .swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content {
+                animation: swal2-animate-question-mark .8s
+            }
+
+            .swal2-icon.swal2-success {
+                border-color: #a5dc86;
+                color: #a5dc86
+            }
+
+            .swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+                position: absolute;
+                width: 3.75em;
+                height: 7.5em;
+                transform: rotate(45deg);
+                border-radius: 50%
+            }
+
+            .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
+                top: -0.4375em;
+                left: -2.0635em;
+                transform: rotate(-45deg);
+                transform-origin: 3.75em 3.75em;
+                border-radius: 7.5em 0 0 7.5em
+            }
+
+            .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
+                top: -0.6875em;
+                left: 1.875em;
+                transform: rotate(-45deg);
+                transform-origin: 0 3.75em;
+                border-radius: 0 7.5em 7.5em 0
+            }
+
+            .swal2-icon.swal2-success .swal2-success-ring {
+                position: absolute;
+                z-index: 2;
+                top: -0.25em;
+                left: -0.25em;
+                box-sizing: content-box;
+                width: 100%;
+                height: 100%;
+                border: .25em solid rgba(165,220,134,.3);
+                border-radius: 50%
+            }
+
+            .swal2-icon.swal2-success .swal2-success-fix {
+                position: absolute;
+                z-index: 1;
+                top: .5em;
+                left: 1.625em;
+                width: .4375em;
+                height: 5.625em;
+                transform: rotate(-45deg)
+            }
+
+            .swal2-icon.swal2-success [class^=swal2-success-line] {
+                display: block;
+                position: absolute;
+                z-index: 2;
+                height: .3125em;
+                border-radius: .125em;
+                background-color: #a5dc86
+            }
+
+            .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+                top: 2.875em;
+                left: .8125em;
+                width: 1.5625em;
+                transform: rotate(45deg)
+            }
+
+            .swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+                top: 2.375em;
+                right: .5em;
+                width: 2.9375em;
+                transform: rotate(-45deg)
+            }
+
+            .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
+                animation: swal2-animate-success-line-tip .75s
+            }
+
+            .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
+                animation: swal2-animate-success-line-long .75s
+            }
+
+            .swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right {
+                animation: swal2-rotate-success-circular-line 4.25s ease-in
+            }
+
+            .swal2-progress-steps {
+                flex-wrap: wrap;
+                align-items: center;
+                max-width: 100%;
+                margin: 1.25em auto;
+                padding: 0;
+                background: rgba(0,0,0,0);
+                font-weight: 600
+            }
+
+            .swal2-progress-steps li {
+                display: inline-block;
+                position: relative
+            }
+
+            .swal2-progress-steps .swal2-progress-step {
+                z-index: 20;
+                flex-shrink: 0;
+                width: 2em;
+                height: 2em;
+                border-radius: 2em;
+                background: #2778c4;
+                color: #fff;
+                line-height: 2em;
+                text-align: center
+            }
+
+            .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+                background: #2778c4
+            }
+
+            .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step {
+                background: #add8e6;
+                color: #fff
+            }
+
+            .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line {
+                background: #add8e6
+            }
+
+            .swal2-progress-steps .swal2-progress-step-line {
+                z-index: 10;
+                flex-shrink: 0;
+                width: 2.5em;
+                height: .4em;
+                margin: 0 -1px;
+                background: #2778c4
+            }
+
+            [class^=swal2] {
+                -webkit-tap-highlight-color: rgba(0,0,0,0)
+            }
+
+            .swal2-show {
+                animation: swal2-show .3s
+            }
+
+            .swal2-hide {
+                animation: swal2-hide .15s forwards
+            }
+
+            .swal2-noanimation {
+                transition: none
+            }
+
+            .swal2-scrollbar-measure {
+                position: absolute;
+                top: -9999px;
+                width: 50px;
+                height: 50px;
+                overflow: scroll
+            }
+
+            .swal2-rtl .swal2-close {
+                margin-right: initial;
+                margin-left: 0
+            }
+
+            .swal2-rtl .swal2-timer-progress-bar {
+                right: 0;
+                left: auto
+            }
+
+            @keyframes swal2-toast-show {
+                0% {
+                    transform: translateY(-0.625em) rotateZ(2deg)
+                }
+
+                33% {
+                    transform: translateY(0) rotateZ(-2deg)
+                }
+
+                66% {
+                    transform: translateY(0.3125em) rotateZ(2deg)
+                }
+
+                100% {
+                    transform: translateY(0) rotateZ(0deg)
+                }
+            }
+
+            @keyframes swal2-toast-hide {
+                100% {
+                    transform: rotateZ(1deg);
+                    opacity: 0
+                }
+            }
+
+            @keyframes swal2-toast-animate-success-line-tip {
+                0% {
+                    top: .5625em;
+                    left: .0625em;
+                    width: 0
+                }
+
+                54% {
+                    top: .125em;
+                    left: .125em;
+                    width: 0
+                }
+
+                70% {
+                    top: .625em;
+                    left: -0.25em;
+                    width: 1.625em
+                }
+
+                84% {
+                    top: 1.0625em;
+                    left: .75em;
+                    width: .5em
+                }
+
+                100% {
+                    top: 1.125em;
+                    left: .1875em;
+                    width: .75em
+                }
+            }
+
+            @keyframes swal2-toast-animate-success-line-long {
+                0% {
+                    top: 1.625em;
+                    right: 1.375em;
+                    width: 0
+                }
+
+                65% {
+                    top: 1.25em;
+                    right: .9375em;
+                    width: 0
+                }
+
+                84% {
+                    top: .9375em;
+                    right: 0;
+                    width: 1.125em
+                }
+
+                100% {
+                    top: .9375em;
+                    right: .1875em;
+                    width: 1.375em
+                }
+            }
+
+            @keyframes swal2-show {
+                0% {
+                    transform: scale(0.7)
+                }
+
+                45% {
+                    transform: scale(1.05)
+                }
+
+                80% {
+                    transform: scale(0.95)
+                }
+
+                100% {
+                    transform: scale(1)
+                }
+            }
+
+            @keyframes swal2-hide {
+                0% {
+                    transform: scale(1);
+                    opacity: 1
+                }
+
+                100% {
+                    transform: scale(0.5);
+                    opacity: 0
+                }
+            }
+
+            @keyframes swal2-animate-success-line-tip {
+                0% {
+                    top: 1.1875em;
+                    left: .0625em;
+                    width: 0
+                }
+
+                54% {
+                    top: 1.0625em;
+                    left: .125em;
+                    width: 0
+                }
+
+                70% {
+                    top: 2.1875em;
+                    left: -0.375em;
+                    width: 3.125em
+                }
+
+                84% {
+                    top: 3em;
+                    left: 1.3125em;
+                    width: 1.0625em
+                }
+
+                100% {
+                    top: 2.8125em;
+                    left: .8125em;
+                    width: 1.5625em
+                }
+            }
+
+            @keyframes swal2-animate-success-line-long {
+                0% {
+                    top: 3.375em;
+                    right: 2.875em;
+                    width: 0
+                }
+
+                65% {
+                    top: 3.375em;
+                    right: 2.875em;
+                    width: 0
+                }
+
+                84% {
+                    top: 2.1875em;
+                    right: 0;
+                    width: 3.4375em
+                }
+
+                100% {
+                    top: 2.375em;
+                    right: .5em;
+                    width: 2.9375em
+                }
+            }
+
+            @keyframes swal2-rotate-success-circular-line {
+                0% {
+                    transform: rotate(-45deg)
+                }
+
+                5% {
+                    transform: rotate(-45deg)
+                }
+
+                12% {
+                    transform: rotate(-405deg)
+                }
+
+                100% {
+                    transform: rotate(-405deg)
+                }
+            }
+
+            @keyframes swal2-animate-error-x-mark {
+                0% {
+                    margin-top: 1.625em;
+                    transform: scale(0.4);
+                    opacity: 0
+                }
+
+                50% {
+                    margin-top: 1.625em;
+                    transform: scale(0.4);
+                    opacity: 0
+                }
+
+                80% {
+                    margin-top: -0.375em;
+                    transform: scale(1.15)
+                }
+
+                100% {
+                    margin-top: 0;
+                    transform: scale(1);
+                    opacity: 1
+                }
+            }
+
+            @keyframes swal2-animate-error-icon {
+                0% {
+                    transform: rotateX(100deg);
+                    opacity: 0
+                }
+
+                100% {
+                    transform: rotateX(0deg);
+                    opacity: 1
+                }
+            }
+
+            @keyframes swal2-rotate-loading {
+                0% {
+                    transform: rotate(0deg)
+                }
+
+                100% {
+                    transform: rotate(360deg)
+                }
+            }
+
+            @keyframes swal2-animate-question-mark {
+                0% {
+                    transform: rotateY(-360deg)
+                }
+
+                100% {
+                    transform: rotateY(0)
+                }
+            }
+
+            @keyframes swal2-animate-i-mark {
+                0% {
+                    transform: rotateZ(45deg);
+                    opacity: 0
+                }
+
+                25% {
+                    transform: rotateZ(-25deg);
+                    opacity: .4
+                }
+
+                50% {
+                    transform: rotateZ(15deg);
+                    opacity: .8
+                }
+
+                75% {
+                    transform: rotateZ(-5deg);
+                    opacity: 1
+                }
+
+                100% {
+                    transform: rotateX(0);
+                    opacity: 1
+                }
+            }
+
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+                overflow: hidden
+            }
+
+            body.swal2-height-auto {
+                height: auto !important
+            }
+
+            body.swal2-no-backdrop .swal2-container {
+                background-color: rgba(0,0,0,0) !important;
+                pointer-events: none
+            }
+
+            body.swal2-no-backdrop .swal2-container .swal2-popup {
+                pointer-events: all
+            }
+
+            body.swal2-no-backdrop .swal2-container .swal2-modal {
+                box-shadow: 0 0 10px rgba(0,0,0,.4)
+            }
+
+            @media print {
+                body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+                    overflow-y: scroll !important
+                }
+
+                body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true] {
+                    display: none
+                }
+
+                body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {
+                    position: static !important
+                }
+            }
+
+            body.swal2-toast-shown .swal2-container {
+                box-sizing: border-box;
+                width: 360px;
+                max-width: 100%;
+                background-color: rgba(0,0,0,0);
+                pointer-events: none
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-top {
+                top: 0;
+                right: auto;
+                bottom: auto;
+                left: 50%;
+                transform: translateX(-50%)
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right {
+                top: 0;
+                right: 0;
+                bottom: auto;
+                left: auto
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left {
+                top: 0;
+                right: auto;
+                bottom: auto;
+                left: 0
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left {
+                top: 50%;
+                right: auto;
+                bottom: auto;
+                left: 0;
+                transform: translateY(-50%)
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-center {
+                top: 50%;
+                right: auto;
+                bottom: auto;
+                left: 50%;
+                transform: translate(-50%, -50%)
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right {
+                top: 50%;
+                right: 0;
+                bottom: auto;
+                left: auto;
+                transform: translateY(-50%)
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left {
+                top: auto;
+                right: auto;
+                bottom: 0;
+                left: 0
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-bottom {
+                top: auto;
+                right: auto;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%)
+            }
+
+            body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+                top: auto;
+                right: 0;
+                bottom: 0;
+                left: auto
+            }
+        </style>
+        <script type="module" src="https://muneer.cx/static/v3/js/loader.min.js?cid=7e6f57f5-43a9-4c2b-97bc-bf2ff14b14c7" id="muneer-loader-js"></script>
+    </head>
+    <body class="loged-user loaded">
+        <div class="preloader checking" id="preloader-logo">
+            <div class="loader">
+                <div class="loader-logo">
+                    <img src="https://apps.balady.gov.sa/BALADYCDN/Content/images/logo-icon.svg" alt="logo">
+                </div>
+                <div class="loader-figure"></div>
+            </div>
+        </div>
+        <div class="site-header-cont">
+            <header class="site-header inner-header-login">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="https://balady.gov.sa/ar">
+                            <img class="logo" alt="logo" src="https://apps.balady.gov.sa/BALADYCDN/Content/Images/logo-light.svg" style="height: 40px;">
+                        </a>
+                        <header class="mainHeader">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col d-flex columns">
+                                        <div class="region region--header">
+                                            <div id="block-sitebranding" class="clearfix site-branding block block-system block-system-branding-block">
+                                                <a href="https://balady.gov.sa/ar" rel="home" class="site-branding__logo">
+                                                    <img src="https://balady.gov.sa/themes/custom/balady_new/logo.svg" alt="الرئيسية">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <nav class="navbar navbar-expand-lg position-static header-mobile-container">
+                                            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarSupportedContent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="30px" height="30px">
+                                                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                <div class="region region--header-content">
+                                                    <nav aria-labelledby="block-balady-main-menu-menu" id="block-balady-main-menu" class="block block-menu navigation menu--main">
+                                                        <h2 class="visually-hidden block-title" id="block-balady-main-menu-menu">القائمة الرئيسية</h2>
+                                                        <div class="block-content">
+                                                            <ul class="menu" aria-hidden="false">
+                                                                <li class="menu-item menu-item--expanded  dropdown menu-item-first menu-level-0 menu-count-1" aria-hidden="false">
+                                                                    <a class=" dropdown-toggle" href="#" role="button" aria-expanded="false" aria-hidden="false" data-toggle="dropdown">
+                                                                        <span>عن بلدي</span>
+                                                                    </a>
+                                                                    <div class="dropdown-menu">
+                                                                        <ul class="menu" aria-hidden="false">
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-1" aria-hidden="false">
+                                                                                <span>من نحن</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/about-balady" data-drupal-link-system-path="node/10671">من نحن</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/11036" data-drupal-link-system-path="node/11036">الهيكل التنظيمي</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/11038" data-drupal-link-system-path="node/11038">الهيكل الإستراتيجي للوزارة </a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/11014" data-drupal-link-system-path="node/11014">السياسات والاستراتيجيات</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-5" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/11004" data-drupal-link-system-path="node/11004">أهداف التنمية المستدامة</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-6" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/rules" data-drupal-link-system-path="rules">الأنظمة واللوائح</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-7" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/10982" data-drupal-link-system-path="node/10982">الوظائف</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-8" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/11217" data-drupal-link-system-path="node/11217">تواصل معنا</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-2" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/e_participation" data-drupal-link-system-path="node/11024">المشاركة الإلكترونية</a>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/consultations" data-drupal-link-system-path="consultations">الاستشارات</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/12029" data-drupal-link-system-path="node/12029">بيان المشاركة الالكترونية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/e_participation/11190" data-drupal-link-system-path="node/11190">البيانات المفتوحة</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/e_participation/feedback" data-drupal-link-system-path="node/11205">التغذية الراجعة</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-5" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/e_participation/development-and-ideas" data-drupal-link-system-path="node/11281">التطوير المشترك والأفكار</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-6" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/e_participation/11022" data-drupal-link-system-path="node/11022">وسائل التواصل الاجتماعي</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-3" aria-hidden="false">
+                                                                                <span>الأخبار والفعاليات</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/news" data-drupal-link-system-path="node/11152">الأخبار</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/events-list" data-drupal-link-system-path="events-list">الفعاليات</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-4" aria-hidden="false">
+                                                                                <span>المنافسات والميزانية</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/10981" data-drupal-link-system-path="node/10981">المنافسات والمشتريات</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/budget-statistics" data-drupal-link-system-path="budget-statistics">الميزانية والإنفاق</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="menu-item menu-item--expanded  dropdown menu-item-first menu-level-0 menu-count-2" aria-hidden="false">
+                                                                    <a class=" dropdown-toggle" href="#" role="button" aria-expanded="false" aria-hidden="false" data-toggle="dropdown">
+                                                                        <span>مركز المعرفة</span>
+                                                                    </a>
+                                                                    <div class="dropdown-menu">
+                                                                        <ul class="menu" aria-hidden="false">
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-1" aria-hidden="false">
+                                                                                <span>مبادرات وشراكات</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/initiatives" data-drupal-link-system-path="node/10897">المبادرات</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/partners" data-drupal-link-system-path="node/10903">الشراكات</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://istitlaa.ncc.gov.sa/ar/Municipality/momra/Pages/default.aspx">منصة استطلاع</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://eparticipation.my.gov.sa/">منصة تفاعل</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-2" aria-hidden="false">
+                                                                                <span>بيانات وإحصائيات</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/e_participation/11190" data-drupal-link-system-path="node/11190">البيانات المفتوحة</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/e_participation/feedback/11180" data-drupal-link-system-path="node/11180">إحصائيات ومؤشرات المنصة</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="menu-item menu-item--expanded  dropdown menu-item-first menu-level-0 menu-count-3" aria-hidden="false">
+                                                                    <a class=" dropdown-toggle" href="#" role="button" aria-expanded="false" aria-hidden="false" data-toggle="dropdown">
+                                                                        <span>الخدمات</span>
+                                                                    </a>
+                                                                    <div class="dropdown-menu">
+                                                                        <ul class="menu" aria-hidden="false">
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-1" aria-hidden="false">
+                                                                                <span>الصفحات الشخصية</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/11106">إدارة الطلبات</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/11108">إدارة الرخص</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://apps.balady.gov.sa/dashboardclient/dashboard">لوحة التحكم</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-2" aria-hidden="false">
+                                                                                <span>المنظمات والأنظمة</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10767">منصة رسم إشغال مرافق الإيواء</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10800">منصة رسم تقديم منتجات التبغ</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/products/10721" data-drupal-link-system-path="products/10721">بلدي أعمال</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/products/10635" data-drupal-link-system-path="products/10635">تصنيف مقدمي خدمات المدن</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-3" aria-hidden="false">
+                                                                                <span>التفويض البلدي الإلكتروني</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10794">إضافة منشأة إلى مدير حساب</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10792">الاستعلام عن طلبات منشأة</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10793">الاستعلام عن مفوضي منشأة</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-4" aria-hidden="false">
+                                                                                <span>الرخص التجارية</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/11010">إصدار رخصة تجارية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10485">تجديد رخصة نشاط تجاري</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10492">إلغاء رخصة نشاط تجاري</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-5" aria-hidden="false">
+                                                                                <span>الرخص الإنشائية</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10472">إصدار رخصة بناء</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10538">خدمة إصدار رخصة تسوير أراضي فضاء</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-6" aria-hidden="false">
+                                                                                <span>الشهادات الصحية</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10592">إصدار شهادة صحية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10596">تجديد شهادة صحية</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-7" aria-hidden="false">
+                                                                                <span>خدمات تنسيق المشروعات</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/products/10497" data-drupal-link-system-path="products/10497">خدمات تنسيق أعمال البنية التحتية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/products/11535" data-drupal-link-system-path="products/11535">خدمات تنسيق المشروعات الكبرى</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-8" aria-hidden="false">
+                                                                                <span>خدمات التقارير المساحية</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/services/10747">إصدار تقرير مساحي</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-9" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/services" data-drupal-link-system-path="node/10895">قائمة الخدمات</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="menu-item menu-item--expanded  dropdown menu-item-first menu-level-0 menu-count-4" aria-hidden="false">
+                                                                    <a class=" dropdown-toggle" href="#" role="button" aria-expanded="false" aria-hidden="false" data-toggle="dropdown">
+                                                                        <span>الاستعلامات</span>
+                                                                    </a>
+                                                                    <div class="dropdown-menu">
+                                                                        <ul class="menu" aria-hidden="false">
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-1" aria-hidden="false">
+                                                                                <span>الاستعلامات العامة</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/node/18920" data-drupal-link-system-path="node/18920">العقود النموذجية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A9-%D9%84%D9%84%D8%A5%D8%AC%D8%B1%D8%A7%D8%A1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D8%B2%D9%8A%D8%A9" data-drupal-link-system-path="node/11110">الاستعلام عن المخالفة للإجراءات الاحترازية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85-%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%8A%D8%A9" data-drupal-link-system-path="node/11112">حاسبة الرسوم المعلوماتية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9" data-drupal-link-system-path="node/11114">الاستعلام عن المكاتب الهندسية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-5" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%B9%D9%82%D9%88%D8%AF-%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%81%D8%A9" data-drupal-link-system-path="node/11116">الاستعلام عن عقود النظافة</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-6" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A3%D8%B3%D9%88%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AC%D8%B1-%D8%A7%D9%84%D9%85%D8%AA%D9%86%D9%82%D9%84%D8%A9" data-drupal-link-system-path="node/11118">أسواق المتاجر المتنقلة</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-2" aria-hidden="false">
+                                                                                <span>الأراضي والبناء</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://architsaudi.dasc.gov.sa/">الاستعلام عن العمارة السعودية </a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%B1%D8%AE%D8%B5%D8%A9-%D8%A8%D9%86%D8%A7%D8%A1" data-drupal-link-system-path="node/11124">استعلام عن رخصة بناء</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%83%D8%B4%D9%81-%D8%A7%D9%84%D8%AC%D8%BA%D8%B1%D8%A7%D9%81%D9%8A" data-drupal-link-system-path="node/11130">المستكشف الجغرافي</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D9%85%D8%B3%D8%AA%D9%83%D8%B4%D9%81-%D8%A7%D9%84%D8%AA%D8%BA%D8%B7%D9%8A%D8%A9-%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D8%AD%D8%AA%D9%8A%D8%A9" data-drupal-link-system-path="node/11132">مستكشف التغطية لخدمات البنية التحتية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-5" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%AA%D9%82%D8%B1%D9%8A%D8%B1-%D9%85%D8%B3%D8%A7%D8%AD%D9%8A" data-drupal-link-system-path="node/11632">الاستعلام عن تقرير مساحي</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-3" aria-hidden="false">
+                                                                                <span>الاستعلامات التجارية</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://commercial.balady.gov.sa/OperationalLicenseForBoards/Inquiry">الاستعلام عن الرخص التشغيلية للوحات الدعائية والاعلانية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%B1%D8%AE%D8%B5%D8%A9-%D9%86%D8%B4%D8%A7%D8%B7-%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A" data-drupal-link-system-path="node/11134">استعلام عن رخصة نشاط تجاري</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A3%D9%86%D8%B4%D8%B7%D8%A9-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D8%B7%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%84%D8%AF%D9%8A%D8%A9" data-drupal-link-system-path="node/11136">الأنشطة التجارية والاشتراطات البلدية</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%85%D8%B3%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%AA%D8%AC%D9%88%D9%84%D8%A9" data-drupal-link-system-path="node/11138">الاستعلام عن مسارات العربات المتجولة</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-item--expanded  menu-level-1 menu-count-4" aria-hidden="false">
+                                                                                <span>خدمات إكرام الموتى</span>
+                                                                                <ul class="menu" aria-hidden="false">
+                                                                                    <li class="menu-item menu-level-2 menu-count-1" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%85%D9%82%D8%AF%D9%85%D9%8A-%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D9%86%D9%82%D9%84-%D9%88%D8%AA%D8%AC%D9%87%D9%8A%D8%B2-%D8%A7%D9%84%D9%85%D9%88%D8%AA%D9%89-%D8%A7%D9%84%D8%AC%D9%87%D8%A7%D8%AA-%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D9%8A%D8%A9" data-drupal-link-system-path="node/10488">الاستعلام عن مقدمي خدمات نقل وتجهيز الموتى (الجهات الخيرية)</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-2" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%82%D8%A8%D8%B1-%D9%85%D8%AA%D9%88%D9%81%D9%8A" data-drupal-link-system-path="node/10724">الاستعلام عن قبر متوفي</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-3" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%B7%D8%A8%D8%A7%D8%B9%D8%A9-%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%AF%D9%81%D9%86" data-drupal-link-system-path="node/10477">طباعة شهادة دفن</a>
+                                                                                    </li>
+                                                                                    <li class="menu-item menu-level-2 menu-count-4" aria-hidden="false">
+                                                                                        <a href="https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%A8%D8%B1" data-drupal-link-system-path="node/10729">الاستعلام عن المقابر</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-5" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/products/%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%D9%8A-%D9%84%D9%84%D9%88%D8%AD%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9" data-drupal-link-system-path="node/11704">الدليل التنظيمي للوحات التجارية</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="menu-item menu-item--expanded  dropdown menu-item-first menu-level-0 menu-count-5" aria-hidden="false">
+                                                                    <a class=" dropdown-toggle" href="#" role="button" aria-expanded="false" aria-hidden="false" data-toggle="dropdown">
+                                                                        <span>المنصات</span>
+                                                                    </a>
+                                                                    <div class="dropdown-menu">
+                                                                        <ul class="menu" aria-hidden="false">
+                                                                            <li class="menu-item menu-level-1 menu-count-1" aria-hidden="false">
+                                                                                <a href="https://furas.momra.gov.sa/">بوابة الفرص الاستثمارية</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-2" aria-hidden="false">
+                                                                                <a href="https://engage.balady.gov.sa/">المنصات التفاعلية</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-3" aria-hidden="false">
+                                                                                <a href="https://socinvest.momah.gov.sa">منصة تحدي الاستثمار الاجتماعي للقطاع البلدي والإسكان</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="menu-item menu-item--expanded  dropdown menu-item-first menu-level-0 menu-count-6" aria-hidden="false">
+                                                                    <a class=" dropdown-toggle" href="#" role="button" aria-expanded="false" aria-hidden="false" data-toggle="dropdown">
+                                                                        <span>تواصل معنا</span>
+                                                                    </a>
+                                                                    <div class="dropdown-menu">
+                                                                        <ul class="menu" aria-hidden="false">
+                                                                            <li class="menu-item menu-level-1 menu-count-1" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/form/contact-us" data-drupal-link-system-path="node/11316">اتصل بنا</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-2" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/node/11211" data-drupal-link-system-path="node/11211">بلاغ عن فساد إلى (نزاهة)</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-3" aria-hidden="false">
+                                                                                <a href="https://momah.gov.sa/ar/report-corruption">الإبلاغ عن شبهة فساد</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-4" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/faq" data-drupal-link-system-path="node/10902">الأسئلة الشائعة</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-5" aria-hidden="false">
+                                                                                <a href="https://deaf.dga.gov.sa/">الدعم الفني بلغة الإشارة</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-6" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/node/11188" data-drupal-link-system-path="node/11188">دليل الأمانات</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-7" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/e_participation/11022" data-drupal-link-system-path="node/11022">وسائل التواصل الإجتماعي</a>
+                                                                            </li>
+                                                                            <li class="menu-item menu-level-1 menu-count-8" aria-hidden="false">
+                                                                                <a href="https://balady.gov.sa/ar/services/%D8%AD%D8%AC%D8%B2-%D9%85%D9%88%D8%B9%D8%AF-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" data-drupal-link-system-path="node/10541">حجز موعد إلكتروني</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </nav>
+                                                </div>
+                                                <div class="header-left header-left_hide">
+                                                    <div class="region-header-left d-flex align-items-center">
+                                                        <div class="header-search headersearch_hide">
+                                                            <a role="button" class="search-link" id="searchBtn" aria-label="بحث" href="#headerSearch" data-toggle="modal">
+                                                                <i class="fa fa-search"></i>
+                                                                بحث
+                                                            </a>
+                                                        </div>
+                                                        <div id="webAccessabilityBtnAncor" class="dropdown webAccessability-ddl webAccessability_hide">
+                                                            <a class="align-items-center btn d-flex flex-column pt-1 text-white p-0 shadow-none" id="webAccessabilityBtnAncorBtn" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa fa-cog"></i>
+                                                                الإعدادات
+			
+                                                            </a>
+                                                            <ul class="accesability shadow-lg dropdown-menu">
+                                                                <li class="font-size custom-toggle">
+                                                                    <span class="small text-center">حجم الخط</span>
+                                                                    <div class="font-size-content">
+                                                                        <button class="big" aria-label="big">أ+</button>
+                                                                        <button class="normal" aria-label="Normal">أ</button>
+                                                                        <button class="small" aria-label="small">أ-</button>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="custom-toggle">
+                                                                    <button class="print-page" aria-label="الطباعة">
+                                                                        <span class="small text-body">الطباعة</span>
+                                                                        <svg width="30" height="30" viewBox="0 0 24 24" fill="#6c757d" xmlns="http://www.w3.org/2000/svg">
+                                                                            <g clip-path="url(#clip0_231_6413)">
+                                                                                <path d="M7.39838 9.62458C7.13373 8.22471 7.11198 7.30214 7.2918 6.04077C7.36249 5.54493 7.76829 5.16693 8.26619 5.11261C11.0531 4.80859 12.9285 4.80048 15.7051 5.10727C16.2167 5.16379 16.6267 5.56231 16.6847 6.07374C16.8283 7.34307 16.81 8.26025 16.5963 9.62458" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                <path d="M7.00713 16.8904C5.80797 16.8203 4.85718 15.8255 4.85718 14.6087V13C4.85718 11.2857 5.42527 9.83404 7.71432 9.57145C11.0648 9.18709 12.9362 9.19171 16.2858 9.57145C18.5566 9.82889 19.1429 11.2857 19.1429 13V14.6087C19.1429 15.8255 18.1922 16.8203 16.993 16.8904" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                                <path d="M16.6202 15.4192C16.8965 16.0814 17.0419 16.9741 17.1045 17.8277C17.1481 18.4237 16.6822 18.922 16.0859 18.9619C13.0409 19.1661 10.9589 19.1667 7.91381 18.9621C7.31766 18.922 6.85192 18.424 6.89553 17.8281C6.95791 16.9758 7.10295 16.0849 7.37825 15.4229C7.65189 14.765 8.36728 14.4975 9.07507 14.4151C11.1997 14.1677 12.756 14.1606 14.9289 14.4145C15.6341 14.4969 16.3469 14.764 16.6202 15.4192Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                            </g>
+                                                                            <defs>
+                                                                                <clipPath id="clip0_231_6413">
+                                                                                    <rect width="16" height="16" fill="white" transform="translate(4 4)"></rect>
+                                                                                </clipPath>
+                                                                            </defs>
+                                                                        </svg>
+                                                                    </button>
+                                                                </li>
+                                                                <li class="custom-toggle">
+                                                                    <div class="switcher">
+                                                                        <label for="toggle-0">
+                                                                            <span class="small">تبيان الألوان
+							</span>
+                                                                            <input type="checkbox" id="toggle-0">
+                                                                            <span>
+                                                                                <small></small>
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- Modal Search -->
+                                                        <div class="fade modal modal-search" id="headerSearch" tabindex="-1" aria-labelledby="headerSearch" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header container justify-content-end">
+                                                                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                                                            إغلاق <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body pb-0 px-0">
+                                                                        <div class="container">
+                                                                            <div class="modal-search-title">
+                                                                                <div class="slogan-title text-white mb-4">نساعدك للوصول إلى ما تبحث عنه</div>
+                                                                            </div>
+                                                                            <div class="search-api-form search px-5">
+                                                                                <form class="form-search" action="solr-serach-v1" method="get" id="form-solr-serach" accept-charset="UTF-8">
+                                                                                    <div class="form-item-search">
+                                                                                        <input class="form-autocomplete form-text form-control ui-autocomplete-input" type="text" id="edit-search-api-fulltext" name="search_api_fulltext" value="" size="30" maxlength="128" placeholder="ابحث عن ما تريد" autocomplete="off">
+                                                                                        <button type="submit" class="btn btn-sm btn-primary px-5" data-search-url="https://balady.gov.sa" onclick="redirectToPortalSearch(event,this)">بحث</button>
+                                                                                    </div>
+                                                                                </form>
+                                                                                <a href="https://balady.gov.sa/solr-serach-v1" class="btn btn-white mx-3">البحث
+									المتقدم</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-search-suggestions">
+                                                                            <div class="container py-5">
+                                                                                <div class="suggestions-content px-5">
+                                                                                    <h3 class="text-dark mb-4">اقتراحات
+									</h3>
+                                                                                    <div class="row mb-5">
+                                                                                        <div class="col-sm-4 col-lg-2 col-md-4 mb-4">
+                                                                                            <a class="card border-0 rounded p-3 minimal text-center h-100" href="https://balady.gov.sa/ar/products/10920">
+                                                                                                <div class="card-image-container p-2 bg-white rounded-4 icon d-flex justify-content-center mx-auto">
+                                                                                                    <img src="https://balady.gov.sa/sites/default/files/products/%D8%A7%D9%84%D8%B1%D8%AE%D8%B5%20%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D9%87%20_2.png" class="img-fluid" alt="الرخص التجارية" title="الرخص التجارية">
+                                                                                                </div>
+                                                                                                <p class="card-text text-black small mt-2">الرخص التجارية</p>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4 col-lg-2 col-md-4 mb-4">
+                                                                                            <a class="card border-0 rounded p-3 minimal text-center h-100" href="https://balady.gov.sa/ar/products/10920">
+                                                                                                <div class="card-image-container p-2 bg-white rounded-4 icon d-flex justify-content-center mx-auto">
+                                                                                                    <img src="https://balady.gov.sa/sites/default/files/products/%D8%A7%D9%84%D8%B1%D8%AE%D8%B5%20%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D9%87%20_2.png" class="img-fluid" alt="الرخص التجارية" title="الرخص التجارية">
+                                                                                                </div>
+                                                                                                <p class="card-text text-black small mt-2">الرخص الإنشائية</p>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4 col-lg-2 col-md-4 mb-4">
+                                                                                            <a class="card border-0 rounded p-3 minimal text-center h-100" href="https://balady.gov.sa/ar/products/10920">
+                                                                                                <div class="card-image-container p-2 bg-white rounded-4 icon d-flex justify-content-center mx-auto">
+                                                                                                    <img src="https://balady.gov.sa/sites/default/files/products/%D8%A7%D9%84%D8%B1%D8%AE%D8%B5%20%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D9%87%20_2.png" class="img-fluid" alt="الرخص التجارية" title="الرخص التجارية">
+                                                                                                </div>
+                                                                                                <p class="card-text text-black small mt-2">حجز المواعيد الإلكترونية</p>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4 col-lg-2 col-md-4 mb-4">
+                                                                                            <a class="card border-0 rounded p-3 minimal text-center h-100" href="https://balady.gov.sa/ar/products/10920">
+                                                                                                <div class="card-image-container p-2 bg-white rounded-4 icon d-flex justify-content-center mx-auto">
+                                                                                                    <img src="https://balady.gov.sa/sites/default/files/products/%D8%A7%D9%84%D8%B1%D8%AE%D8%B5%20%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D9%87%20_2.png" class="img-fluid" alt="الرخص التجارية" title="الرخص التجارية">
+                                                                                                </div>
+                                                                                                <p class="card-text text-black small mt-2">خدمات الدمج والتجزئة</p>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4 col-lg-2 col-md-4 mb-4">
+                                                                                            <a class="card border-0 rounded p-3 minimal text-center h-100" href="https://balady.gov.sa/ar/products/10920">
+                                                                                                <div class="card-image-container p-2 bg-white rounded-4 icon d-flex justify-content-center mx-auto">
+                                                                                                    <img src="https://balady.gov.sa/sites/default/files/products/%D8%A7%D9%84%D8%B1%D8%AE%D8%B5%20%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D9%87%20_2.png" class="img-fluid" alt="الرخص التجارية" title="الرخص التجارية">
+                                                                                                </div>
+                                                                                                <p class="card-text text-black small mt-2">نظام علاقات العملاء</p>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4 col-lg-2 col-md-4 mb-4">
+                                                                                            <a class="card border-0 rounded p-3 minimal text-center h-100" href="https://balady.gov.sa/ar/products/10920">
+                                                                                                <div class="card-image-container p-2 bg-white rounded-4 icon d-flex justify-content-center mx-auto">
+                                                                                                    <img src="https://balady.gov.sa/sites/default/files/products/%D8%A7%D9%84%D8%B1%D8%AE%D8%B5%20%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D9%87%20_2.png" class="img-fluid" alt="الرخص التجارية" title="الرخص التجارية">
+                                                                                                </div>
+                                                                                                <p class="card-text text-black small mt-2">خدمات تنسيق أعمال البنية
+													التحتية</p>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <script type="text/javascript">
+                            setTimeout(function() {
+                                $(".mainHeader .dropdown-toggle").attr("data-toggle", "dropdown");
+                                $(".mainHeader .dropdown-toggle").removeAttr("data-bs-toggle");
+                                $(".mainHeader .navbar-toggler").attr("data-toggle", "collapse");
+                                $(".mainHeader .navbar-toggler").removeAttr("data-bs-toggle");
+                                $(".mainHeader .navbar-toggler").attr("data-target", "#navbarSupportedContent");
+                                $(".mainHeader .navbar-toggler").removeAttr("data-bs-target");
+                            }, 3500);
+                        </script>
+                    </nav>
+                </div>
+                <span class="clr"></span>
+            </header>
+        </div>
+</div><script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.plugin.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.plus.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.picker.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.ummalqura.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/select2/js/select2.min.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/select2/js/i18n/ar.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/parsleyjs/parsley.min.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/parsleyjs/i18n/ar.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/js/app.min.js?v"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/unified_identity_assets/js/app.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/startup.js?v=25&rlm;&rlm;/11&rlm;&rlm;/2025 5:07:09 م"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/Message.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/Validation.js"></script>
+<script type="text/javascript" src="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/health/issue/lib/sweetalert2/sweetalert2.all.min.js"></script>
+<!---------------- EDIT DATA --------------->
+<!------------- EDIT DATA ------------>
+<!--------- EDIT DATA -------->
+<!----- EDIT DATA ----->
+<!-- EDIT DATA -->
+<!-- EDIT DATA -->
