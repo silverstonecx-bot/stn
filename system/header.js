@@ -1,4 +1,36 @@
 // balady-header-loader.js
+
+// balady-header-fix.js
+(function () {
+  function applyFix() {
+    if (!window.jQuery) return; // requires jQuery ($)
+
+    var $ = window.jQuery;
+
+    $(".mainHeader .dropdown-toggle")
+      .attr("data-toggle", "dropdown")
+      .removeAttr("data-bs-toggle");
+
+    $(".mainHeader .navbar-toggler")
+      .attr("data-toggle", "collapse")
+      .removeAttr("data-bs-toggle");
+
+    $(".mainHeader .navbar-toggler")
+      .attr("data-target", "#navbarSupportedContent")
+      .removeAttr("data-bs-target");
+  }
+
+  // Same behavior as your original (3500ms)
+  setTimeout(applyFix, 3500);
+
+  // Also run once on DOM ready (helps if header loads faster)
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyFix);
+  } else {
+    applyFix();
+  }
+})();
+
 (function () {
   function hasBS5() {
     return !!(window.bootstrap && window.bootstrap.Dropdown);
