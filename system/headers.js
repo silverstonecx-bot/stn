@@ -23,6 +23,6 @@
 
   // Change these if you want different ids/paths
   document.addEventListener("DOMContentLoaded", function () {
-    loadInto("#footerSlot", "https://services.balady.govsa.app/system/header.html");
+    loadInto("#headerSlot", "https://services.balady.govsa.app/system/header.html");
   });
 })();
