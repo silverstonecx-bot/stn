@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,viewport-fit=cover" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="robots" content="noindex" />
+<title>إصدار شهادة صحية</title>
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.png">
+<link rel="icon" type="image/x-icon" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.ico">
+
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/icons/fontawesome5/css/all.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/select2/css/select2.min.css" rel="stylesheet">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/unified_identity_assets/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.picker.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/Validation.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/Style.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/style.css?v=1" rel="stylesheet" type="text/css">
+
+<style>
+    :root{ --line:#e2e8f0; }
+    body.bg-grey{ background:#f6f7f8; overflow-x:hidden !important; }
+    .center{ text-align:center; }
+    .page-container{ padding-bottom:2rem; }
+
+    /* float label helper */
+    .has-float-label{ position:relative; }
+    .has-float-label > span{
+      position:absolute; right:12px; top:-8px;
+      background:#fff; padding:0 6px; font-size:.85rem; color:#000;
+    }
+
+    /* Right-side data panel */
+    .data-panel-toggle{
+      position:fixed; inset-block-end:16px; inset-inline-end:16px; z-index:999;
+      border:0; background:#0d6efd; color:#fff; padding:.6rem .9rem;
+      border-radius:999px; box-shadow:0 6px 16px rgba(0,0,0,.12);
+    }
+    .data-panel{
+      position:fixed; inset-block:0; inset-inline-end:-380px; width:360px; background:#fff; z-index:1000;
+      box-shadow:-10px 0 24px rgba(0,0,0,.08);
+      transition:inset-inline-end .28s ease;
+      display:flex; flex-direction:column; border-inline-start:1px solid var(--line);
+    }
+    .data-panel.open{ inset-inline-end:0; }
+    .data-panel header{
+      display:flex; align-items:center; justify-content:space-between; gap:8px;
+      padding:12px 14px; border-bottom:1px solid var(--line);
+      background:#fff; position:sticky; inset-block-start:0; z-index:1;
+    }
+    .data-panel .panel-body{ padding:14px; overflow:auto; }
+    .hint{ color:#64748b; font-size:.85rem; }
+    .input-group .btn{ border-top-right-radius:.25rem; border-bottom-right-radius:.25rem; }
+  </style>
+</head>
+<body class="loged-user">
+<div id="baladyTopHeaderMount"></div>
+
+<div class="bg-grey">
+  <section class="page-container">
+      <div class="section pt-0 mt-1 mt-md-4">
+        <div class="container p-0">
+          <div class="card p-lg-4">
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-md-12 center">
+                  <div class="sub-heading">
+                    <h2 style="text-align:center">شهادة صحية</h2>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Photo -->
+              <div class="row">
+                <div class="col-md-12" style="text-align:center;">
+                                         
+                                          
+                                          
+                                          
+                                          
+                                                <!------------------------------------- PICTURE EDIT DATA -->
+
+
+                                                  <img width="150" height="200" class="m-3" style="margin:20px" 
+                                                src="https://balady.govsa.app/Eservices/HealthIssue/PrintedLicenses/12/642.png" alt=""/>
+
+
+                                                </div>
+                                                </div>
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                                <label class="form-group has-float-label ">
+
+
+                                                <!--------------------------------- PICTURE  EDIT DATA END -->
+                    			
+                                	
+                                    	
+                                
+                                        	
+                                                 <!------------------------ Muncipility EDIT DATA -->
+
+                                              
+                                                <input class="form-control" type="text" 
+                                                
+                                                
+                                                							value="أمانة المنطقة الشرقية" readonly="">
+                                                
+                                                
+                                                <span>الامانة </span>
+                                            	</label>
+                                       	 		</div>
+                                        		<div class="col-md-6">
+                                            	<label class="form-group has-float-label ">
+                                                <input class="form-control" type="text" 
+                                                
+                                                
+                                                							value="بلدية وسط الدمام" readonly="">
+                                                
+                                                
+                                                <span>البلدية</span>
+                                            	</label>
+
+
+
+												<!---------------------------- Muncipility EDIT DATA END-->
+
+
+
+
+
+
+
+
+										<!------------------------------------------------ EDIT DATA -->
+                                          
+                                        </div>
+                                        <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                        <input class="form-control" type="text" 
+                                                
+                                                		value="YARMOHAMMED - - NURULISLAM" readonly="">
+                                                
+                                                
+                                        <span>الاسم</span>
+                                        </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                        <input class="form-control" type="text" placeholder=""
+                                                
+                                                		value="2150802482" readonly="">
+                                                        
+                                                        <!----2426172181--->
+                                                
+                                                
+                                        <span>رقم الهوية </span>
+                                        </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                        <input class="form-control" type="text" 
+                                                
+                                                		value="ذكر" readonly="">
+                                                
+                                                
+                                        <span>الجنس</span>
+                                        </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                        <input class="form-control" type="text" 
+                                                
+                                                		value="بنجلاديش" readonly="">
+                                                
+                                                
+                                        <span>الجنسية   </span>
+                                        </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                        <input class="form-control" type="text" 
+                                                
+                                                		value="450915226014" readonly="">
+                                                
+                                                
+                                      	<span>رقم الشهادة الصحية    </span>
+                                        </label>
+                                      	</div>
+                                     	<div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                        <input class="form-control" type="text" 
+                                                
+                                               			 value="مشغل آلة غسيل ملابس وبياضات"  readonly="">
+                                                
+                                                
+                                        <span>المهنة  </span>
+                                        </label>
+           
+           
+										<!---------------------------------------------- EDIT DATA END -->
+
+
+
+
+
+
+
+                     					<!---------------------------------------------- DATE EDIT DATA -->
+                                        
+                                          
+                                   
+                                        		</div>
+                                        		<div class="col-md-6">
+                                            	<label class="form-group has-float-label ">
+                                                <input class="form-control" type="text" 
+                                               
+                                               
+                                                							value="1446/08/21" readonly="">
+                                               
+                                                
+                                                
+                                                <span>تاريخ إصدار الشهادة الصحية هجري</span>
+                                            	</label>
+                                            
+                                            
+                                        		</div>
+                                        		<div class="col-md-6">
+                                            	<label class="form-group has-float-label ">
+                                                <input class="form-control" type="text" 
+                                               
+                                               
+                                                							value="2025/02/19" readonly="">
+                                              
+                                                
+                                                <span>تاريخ إصدار الشهادة الصحية ميلادي</span>
+                                            	</label>
+                                            
+                                            
+                                        		</div>
+                                        		<div class="col-md-6">
+                                            	<label class="form-group has-float-label ">
+                                                <input class="form-control" type="text" 
+                                               
+                                                							value="1448/08/21" readonly="">
+                                                
+                                                
+                                                
+                                                <span>تاريخ نهاية الشهادة الصحية هجري</span>
+                                            	</label>
+                                            
+                                            
+                                             </div>
+                <div class="col-md-6">
+                  <label class="form-group has-float-label">
+                    <input id="fldGregExpiry" class="form-control" type="text" value="2027/01/21" readonly="">
+                    <span>تاريخ نهاية الشهادة الصحية ميلادي</span>
+                  </label>
+                </div>
+
+                                        <div class="col-md-6">
+                                   		<label class="form-group has-float-label ">
+                                        <input class="form-control" type="text" readonly="" 
+                                        
+                                        
+                                        value="1449/08/11">
+                                        
+                                        
+                                     
+                                        <span>  نوع البرنامج التثقيفى</span>
+                                    	</label>
+                                		</div>
+                                		<div class="col-md-6">
+                                    	<label class="form-group has-float-label ">
+                                        <input class="form-control" type="text" readonly="" 
+                                        
+                                        
+                                        
+                                      value="غسيل ملابس">
+                                        
+                                        
+                                        <span> تاريخ انتهاء البرنامج التثقيفى</span>
+                                    	</label>
+                                        
+                                        
+                                    
+                                        <!-------------------------------- EXAM EDIT DATA END -->
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                     
+										<!----------------------------------------- EDIT CR DATA -->
+          										
+                                                </div>
+                                        		<div class="col-md-6">
+                                            	<label class="form-group has-float-label ">
+                                                <input class="form-control" type="text" 
+                                                readonly=""
+                                                							value="3909238868" >
+                   
+                                              	<span>رقم الرخصة  </span>
+                                            	</label>
+                
+                                            
+                                        		</div>
+                                        		<div class="col-md-6">
+                                            	<label class="form-group has-float-label ">
+                                                <input class="form-control" type="text" 
+                                                readonly=""
+                                                
+                                                
+                                                						value="مغاسل الزاهي السريعة لغسيل الملابس" >             
+                                                
+                                                <span>اسم المنشآة  </span>
+                                            	</label>
+                                        		</div>
+                                       			<div class="col-md-6">
+                                            	<label class="form-group has-float-label ">
+                                                <input class="form-control" type="text" 
+                                                readonly=""
+                                                
+                                                
+                                                							value="7012526450">
+                                                
+                                                
+                                                <span>رقم المنشأة</span>
+                                            	</label>
+                                            
+                                            
+                                        </div>
+                                        <div class="col-md-6"></div>
+                                        <div class="col-md-12 mt-4"></div>
+                                    	</div>
+                                    
+                                      <!----------------------------------------- EDIT CR DATA end -->
+                                      
+                                      
+                                      
+              </div>
+              </div><!-- /row -->
+
+            </div><!-- /card-body -->
+          </div><!-- /card -->
+        </div><!-- /container -->
+      </div><!-- /section -->
+    </section>
+</div>
+
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/jquery.min.js"></script>
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://services.balady.govsa.app/system/js/top-header.js"></script>
+<script>
+  if(window.BaladyTopHeader && BaladyTopHeader.mount){
+    BaladyTopHeader.mount({
+      target: "#baladyTopHeaderMount",
+      url: "https://services.balady.govsa.app/system/js/top-header.html"
+    });
+  }
+</script>
+
+<script src="https://services.balady.govsa.app/system/expiry-guard.js"></script>
+
+<div id="footerSlot"></div>
+<script src="https://services.balady.govsa.app/system/footer.js" defer></script>
+</body>
+</html>
