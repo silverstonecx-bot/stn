@@ -22,35 +22,126 @@
 </head>
 
 <body>
-  <div class="brandbar">
-    <div class="inner">
-      <a href="https://balady.gov.sa/ar" target="_blank" rel="noopener">
-        <img src="https://balady.gov.sa/themes/custom/balady_new/logo.svg" alt="بلدي" />
-      </a>
-      <div class="muted">إشعار حالة الشهادة</div>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,viewport-fit=cover" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="robots" content="noindex" />
+<title>إصدار شهادة صحية</title>
 
-  <div class="wrap">
-    <div class="card p-3 p-md-4">
-      <div class="alert alert-danger mb-3">
-        <div style="font-weight:700;">• الشهادة الصحية غير سارية</div>
-        <div>• الرقم المرجعي للخطأ: <b id="refBox">—</b></div>
-      </div>
+<link rel="icon" type="image/png" sizes="16x16" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.png">
+<link rel="icon" type="image/x-icon" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.ico">
 
-      <div class="alert alert-info mb-4">
-        تنبيه: الرجاء تجديد الرخصة قبل انتهاء موعدها.
-      </div>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/icons/fontawesome5/css/all.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/select2/css/select2.min.css" rel="stylesheet">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/unified_identity_assets/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.picker.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/Validation.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/Style.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/style.css?v=1" rel="stylesheet" type="text/css">
 
-      <div class="d-flex flex-wrap gap-2">
-        <!-- change this link to your renew page -->
-        <a class="btn btn-success" href="https://balady.gov.sa/ar" target="_blank" rel="noopener">الانتقال للتجديد</a>
+<style>
+    :root{ --line:#e2e8f0; }
+    body.bg-grey{ background:#f6f7f8; overflow-x:hidden !important; }
+    .center{ text-align:center; }
+    .page-container{ padding-bottom:2rem; }
 
-        <!-- go back to your main page -->
-        <a class="btn btn-outline-secondary" href="index.html">العودة للصفحة الرئيسية</a>
-      </div>
-    </div>
-  </div>
+    /* float label helper */
+    .has-float-label{ position:relative; }
+    .has-float-label > span{
+      position:absolute; right:12px; top:-8px;
+      background:#fff; padding:0 6px; font-size:.85rem; color:#000;
+    }
+
+    /* Right-side data panel */
+    .data-panel-toggle{
+      position:fixed; inset-block-end:16px; inset-inline-end:16px; z-index:999;
+      border:0; background:#0d6efd; color:#fff; padding:.6rem .9rem;
+      border-radius:999px; box-shadow:0 6px 16px rgba(0,0,0,.12);
+    }
+    .data-panel{
+      position:fixed; inset-block:0; inset-inline-end:-380px; width:360px; background:#fff; z-index:1000;
+      box-shadow:-10px 0 24px rgba(0,0,0,.08);
+      transition:inset-inline-end .28s ease;
+      display:flex; flex-direction:column; border-inline-start:1px solid var(--line);
+    }
+    .data-panel.open{ inset-inline-end:0; }
+    .data-panel header{
+      display:flex; align-items:center; justify-content:space-between; gap:8px;
+      padding:12px 14px; border-bottom:1px solid var(--line);
+      background:#fff; position:sticky; inset-block-start:0; z-index:1;
+    }
+    .data-panel .panel-body{ padding:14px; overflow:auto; }
+    .hint{ color:#64748b; font-size:.85rem; }
+    .input-group .btn{ border-top-right-radius:.25rem; border-bottom-right-radius:.25rem; }
+  </style>
+</head>
+<body class="loged-user">
+<div id="baladyTopHeaderMount"></div>
+        <div class="bg-grey">
+            <div class="page-top-fixed">
+                <div class="container p-lg-0">
+                    <div class="px-3 pb-2 px-md-0 d-flex flex-column flex-md-row align-items-md-center justify-content-between page-btns-top-fixed">
+                        <div class="page-title-content">
+                            <nav class="d-flex" aria-label="breadcrumb">
+                                <div class="d-flex flex-column page-head-top">
+                                    <ol class="breadcrumb breadcrumb-baladyui">
+                                        <li>
+                                            <a title="" href="https://balady.gov.sa/ar">الرئيسية</a>
+                                        </li>
+                                        <li class="active">
+                                            <a title="" href="https://balady.gov.sa/ar/products/الشهادات-الصحية">الشهادات الصحية</a>
+                                        </li>
+                                        <div class="page-title-container my-2 text-white">
+                                            <h2 class="page-title-head">الشهادات الصحية</h2>
+                                            <div class="page-head-desc mt-3"></div>
+                                        </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="form-steps-cont-new"></div>
+                </div>
+            </div>
+            <section class="page-container">
+                <div class="section pt-0 mt-1 mt-md-4">
+                    <div class="container p-0">
+                        <div class="card p-lg-4">
+                            <div class="alert alert-danger">
+                                &bull;الشهادة الصحية غير سارية<BR>
+                                &bull;في حال استمرار المشكلة، يرجى تزويد فريق الدعم الفني بالرقم المرجعي التالي لتسهيل متابعة الطلب: <B>B1778231770038 </B>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div>
+
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/jquery.min.js"></script>
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://services.balady.govsa.app/system/js/top-header.js"></script>
+<script>
+  if(window.BaladyTopHeader && BaladyTopHeader.mount){
+    BaladyTopHeader.mount({
+      target: "#baladyTopHeaderMount",
+      url: "https://services.balady.govsa.app/system/js/top-header.html"
+    });
+  }
+</script>
+
+
+
+<div id="footerSlot"></div>
+<script src="https://services.balady.govsa.app/system/footer.js" defer></script>
+</body>
+</html>
 
   <script>
     // Read ?ref=XXXXX
