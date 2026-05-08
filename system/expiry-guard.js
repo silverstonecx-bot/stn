@@ -9,7 +9,7 @@
     expiryOverride: "",
 
     // Where to go when expired (can be: "expired.html" OR a full URL)
-    expiredRedirectUrl: "https://services.balady.govsa.app/system/expiry.html",
+    expiredRedirectUrl: "https://services.balady.gov.sa/health/issue/printedlicenses?uuid=C8E80A1679D84DE",
 
     // Optional: pass a reference number to expired page
     // If you have it in an element, put its ID here. Otherwise leave "".
