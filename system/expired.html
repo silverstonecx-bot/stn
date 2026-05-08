@@ -8,6 +8,13 @@
   <script>
     window.location.href = "https://services.balady.gov.sa/health/issue/printedlicenses?uuid=C8E80A1679D84DE";
   </script>
+
+    <script>
+    // Read ?ref=XXXXX
+    const p = new URLSearchParams(location.search);
+    const ref = p.get("ref");
+    document.getElementById("refBox").textContent = ref ? ref : "—";
+  </script>
 </head>
 <body>
 </body>
