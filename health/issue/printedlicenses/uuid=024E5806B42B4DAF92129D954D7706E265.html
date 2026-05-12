@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,viewport-fit=cover" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="robots" content="noindex" />
+<title>إصدار شهادة صحية</title>
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.png">
+<link rel="icon" type="image/x-icon" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.ico">
+
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/icons/fontawesome5/css/all.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/select2/css/select2.min.css" rel="stylesheet">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/unified_identity_assets/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.picker.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/Validation.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/Style.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/style.css?v=1" rel="stylesheet" type="text/css">
+
+<style>
+    :root{ --line:#e2e8f0; }
+    body.bg-grey{ background:#f6f7f8; overflow-x:hidden !important; }
+    .center{ text-align:center; }
+    .page-container{ padding-bottom:2rem; }
+
+    /* float label helper */
+    .has-float-label{ position:relative; }
+    .has-float-label > span{
+      position:absolute; right:12px; top:-8px;
+      background:#fff; padding:0 6px; font-size:.85rem; color:#000;
+    }
+
+    /* Right-side data panel */
+    .data-panel-toggle{
+      position:fixed; inset-block-end:16px; inset-inline-end:16px; z-index:999;
+      border:0; background:#0d6efd; color:#fff; padding:.6rem .9rem;
+      border-radius:999px; box-shadow:0 6px 16px rgba(0,0,0,.12);
+    }
+    .data-panel{
+      position:fixed; inset-block:0; inset-inline-end:-380px; width:360px; background:#fff; z-index:1000;
+      box-shadow:-10px 0 24px rgba(0,0,0,.08);
+      transition:inset-inline-end .28s ease;
+      display:flex; flex-direction:column; border-inline-start:1px solid var(--line);
+    }
+    .data-panel.open{ inset-inline-end:0; }
+    .data-panel header{
+      display:flex; align-items:center; justify-content:space-between; gap:8px;
+      padding:12px 14px; border-bottom:1px solid var(--line);
+      background:#fff; position:sticky; inset-block-start:0; z-index:1;
+    }
+    .data-panel .panel-body{ padding:14px; overflow:auto; }
+    .hint{ color:#64748b; font-size:.85rem; }
+    .input-group .btn{ border-top-right-radius:.25rem; border-bottom-right-radius:.25rem; }
+  </style>
+</head>
+<body class="loged-user">
+<div id="baladyTopHeaderMount"></div>
+      <div class="bg-grey">
+            <section class="page-container">
+                <div class="section pt-0 mt-1 mt-md-4">
+                    <div class="container p-0">
+                        <div class="card p-lg-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 center">
+                                        <div class="sub-heading">
+                                            <h2 style="text-align:center">شهادة صحية للأنشطة التجارية</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" style="text-align: center;">
+                                        <img width="200" height="200" class="m-3" style="margin:20px" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/wAARCADNAJIDASIAAhEBAxEB/8QBogAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoLEAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5&#x2B;jp6vHy8/T19vf4&#x2B;foBAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKCxEAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3&#x2B;Pn6/9sAhAADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUUAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/2gAMAwEAAhEDEQA/AMT9ofxRLq3ig6bakDyDgqOtfO3ji7v9Tuh9okKxRx&#x2B;WsZPSup8SeJNQk8d3U&#x2B;oHEwmfzCR0x0ryrxVrz3GpTzMxZHY4bPFdNHTU57Sscnq1hI8hUOCR&#x2B;lU7iWT7IIlPIwD71paprFrHbHBzMRxiuZs75pJSSf8AgNdTaFqXIbFrk5f5VBrWn0lZrbyxLsFYl7qTxfIic9iKjgv7kqfOl4pXuFhmo6ZDC3D7iKoPboozVm5fcCck5PWqkknFYN6mqvuRcDiq9zzn0qVplYYIwfWoC34isjRFbaOlLkKPepJVwwqJ&#x2B;lMYiEH61YSTIxnBqCJcDNIpy9AGgiB1zxkV7R8Bvi0/w28Q6ZcXZM&#x2B;mBx51uTx16/hXjtnEHjznHFIszCRRnBHFK19ydT9aT40svivqHh&#x2B;DSXSa1aUXb7T9xR6&#x2B;le96HDm4DDPTAr8&#x2B;P2APHiyXt5o8&#x2B;DLtwsrcnHoK/Rrw7abY1ZvwrmlH3tDjqeZtiDgcml&#x2B;z&#x2B;5q2A&#x2B;B8p/Kja/8AdP5VfKzmuz84P2h/hXd6F44k1S3tJJLe8Ul4wMDd6ivkTxla3tjdTwtG0ahyQrD7vtX7MeLfCFl4u05rW/iWQclSByp9c18pfFf9mIypcMLH7chViskYwV9M0RqNaHoqVz825YZJepJ5piRtbMGFeieLPBMui3l0gjMSxMQQ45rhpLctJnGAPWuuL5kV6DHv3hXIUPuqrNeiXkLitbT9FuNYmEUETMDwSB0rcl&#x2B;GVzbRHeeeuDWEqqhudEaTlscR9qaT5CeKiaMqcg5z2roJ/CdxFIQke714p0HhS5lyPKIx61KrRZfsZ9jmHTd2pmzA6V0N74cuLRj&#x2B;6NZE0LREqVw3vT5k9jOUHHcryKTg1C8TEHit3TdKN6mdpOKszeHnVCVBFDkkaRoykro5ZflQg0xR3HFaF5YPCSCDVSOBj2OKFIycGi3p8/yspqVCJQSAO/WqdudjNnirVsQlvKT3rREHtX7JXiebw/8AFHTyrfu7hxE4z71&#x2B;zfhX/SdNgKjgoDnt0r8LPhRdy6X4js7uE7ZFlUj65r9p/BfjNLf4MRa7N&#x2B;68my3HPdguKhrU5K26JtR&#x2B;OOkWGoXVsbjmGVoz&#x2B;BI/pVf/AIX5o/8Az8V8e3f2/ULqa6M3M7tKf&#x2B;BHP9ai&#x2B;x33/PWtA5Efd0mfxqtcwB4WUoGDcEVYZ8imNJgetcK0NEfA37Zmhad4euJ4raySOScF2IGK&#x2B;UvBfgt/EsUyYICnOa&#x2B;7/wBujwkb/SrHUo1IHKMcV8u/BawWSS8RRkK2DW0qjjH3TpoQ53Ym8J&#x2B;C4NDV0ZRk9yK6e48P29zDuZAc1rapAkFxjbjbUcdw80e0ALXlzm3ue5SSWhwt94btLe6LbMfhWYNMgaV8KAPpXZ6vb78nvXOXEPlPuU5zWXNc6bGHqOg21zExxlvpXl/jDww1tMskeAWbGBXrkjSDPTNYOpaSL2TfJyw5HtVqpKOiM5U4z3OQ8N6X9mtwsgAZj3rbbT45EYAdPSrMNkFP0qzBFhiAOD61rzS6mkafKrHD6voXmhiq81zk2kyQ7uO3pXrM2lNMdqrnNY&#x2B;seGWigYjg/StIT7nHVo2R5BPCwuMHj2p0pwI1HTvV/XLN7G7Ibv3rMjQ3EoUdK74HkTjyux23gnEesWDD7glUt9M1&#x2B;qfjfxHb2f7P3h3R7S4G7UNhBQ8lBgkGvzC&#x2B;Fnh&#x2B;XxP4osdPtkLNI6g49O9fdHiHTv7OurGwglka2sbdE8uQ52PjnFaHJNXaK4cINoHA46Ueb7fpVuO0do1ORyBTvsb&#x2B;oqLs0sfW39orjqaQX6mskQkDrmlaMuMdK5jM5/4xeHovGfgDVbBoxJIYi0QPUMK&#x2B;Kvgh4c8jVdatTERJCxBBHcGvvJ7XdE4Zsggg14roPw2i0Px74lMcWEuUEqEe/WoqO8bI6MNOzuzxjXtPP2p124Oe9ZkWnSK&#x2B;cH8K9H8df2T4ZMpvZkiuDkgMa8g1H4m6bbtJtuIuOmDXD7Kcj3I1ol/UdLbYS3euVvtPMZYAE1a/4Wpplwnzzp7c1BD4ktNUJ8lwwodJx1ZrGspOyOdnsZfMHXioW00up3cYrqJ4BIQR3rJ1dvsdu8hIwByKhe8zWVkYg09FyTTxaRLwSufrXC&#x2B;JviF5AdIPvDiuSm8d6gxBDniumNF9zCWJS0PcIIAemMipbrTDeQlNvUeleJW3xL1OJ/lbdXeeBPin516ttqq7Y3OBJ6VUqMt7mCxCvZnIfEbw9PbRR4t2O0/PIOgrkLWzaMKEUknjIHWvpn4r6TFceALq6t1zGQrBwOcVV/Zy&#x2B;F2l/EnxtoFteKY9EtGWSdmGPPlzkAe1dNOfLozlrRu24nvn7Dn7ObeG9EvfHXiq18txD5ltDIMbQBkNW1qd42qXeoXRUHzJC5x9TwK&#x2B;ifjDq8Xg/wCGP2C1QQy3RFtGg7IK&#x2B;bLBcLLGT0XNdHNrY8hS11Oos9O32kDccop/Spv7M&#x2B;lb1hpyGxtzgf6tf5VP/ZqegpXZue3DT37rgVG2ntnniu1fSQMZUCq0ulgdRWdmzhVTU5B7RYV3y5ES8sfQV5pL4oF14k1u7t4g9rBb4jcfxYr2bWdKaXSL6NVO5oWA/KvmfwJZ3mn&#x2B;F/EUtyS8wd40z2XJrmqvkZ7GDpwq03J7nzD8cPD2r&#x2B;NdebUEuXVDuXy93FeD658OtdgZnMysuOz19FfEu61i2E5tYXYDOAorw3V7G71HRLq71O8ubXUlJCWoUgFa0p1G9TpdJRV0jg38P6gkoUSAkcfer0bwBY3doyiU5/GvJ7SG4t7ySSQzMn8JJNeh/DbUbz7f5c&#x2B;5txG0H0p12nE0oxTlpoezhSlqzt0A4rE1ezF5ZuAeSK9YtfAwvfDv2mRSjbcgGvPtb0w2kEkYByOleWn2O9xdrM8J1vwlaRTSSTThck1z3kaFayYnuSV9q2PHHnG4eNN24NyPWuTuNNmvnQrAFwMNx3r0oaK7OCrGy91HdaDD4TuFTbuJJxuIr0nRfCHhvU4AsKrvXvXDeFtJW78JtpC6ckV1I&#x2B;5rpuq/Suz8IeGJ9FuFRpvM28bvWoqNRWjCnG8feR6Nf6Al94HuNLU71CbRntzV/wCGkC&#x2B;Atd8HWsOBEbpVkx3Oan0zcumXJ67Yy3PfFHwwvbfxxrOiuYwrW&#x2B;oIzDuAOa51K7R20oJwkfSf7QOrzav4ptdPhG&#x2B;3022EshH99vWvJLQmIs7ckjvXe&#x2B;INRbVNZ126bn7ShUH/AGQcCuBCeYyIThF4Jr1Ox8u4q56zYHNjbHn/AFa/yFT/AJ07T4V&#x2B;wW2AMeUuPyFWPJX0FXr2LPriTTec7cGqk2m/Mc9K6uWz49KrvZjHTNK/U8to5KfT9ylSMqcg8etfO2p6H/ZviHxFpCjbAwDqfqa&#x2B;qbizAz2x1FeGfE3T1s/Feo3SLt3Wwz781yYmPNqepgJ8snHufOHiXwzbx74xHvYE15N4o8HR3SMfsgb/AIDXuuq3G&#x2B;7djg5PSsyeOGfgxrjvxXmKdmfTRSsfJ118HbnWLtlgtNi&#x2B;uOld/wCA/gjBoU0dxdruk7CvaH8mz3NGiKCMUyzK37YTnnkDtVVJNrQ1ikiO&#x2B;tjb6IVRflAIxXjniG2Mlw4bvXvWq2AXR5N7gYFeO6zYebMzDmmouxo9jxvxJ4BjvvMkQfMe9cS3hyWxnEcsRK5&#x2B;9ivcb4pEpDZx0rLk0uK7XLKCO1aXaViYrU5LQrSOMBRnpXX6TZ75lOPam2uirE/yoK6jSbNYtpxyKye5nUh2NbSbLZbSI33XQj8Kw/ghoV3oHi6/4KQyXDeRnvXYfLFablGDjFaHgKzjuPE2lwxqSwk5Hua0hujBS5YSR6Jf6T9ktmblnlgY4PqDXJQ2UQV1kPUbq9a8exRWl7Dp6qN9vbMWYdye1eWSqwf7OBnuTXro&#x2B;blo2ei2EsQsbcZP&#x2B;rX&#x2B;VT&#x2B;dH6ms&#x2B;yeNLOBfSNR&#x2B;lTebHSC599PAfrVeSA1obc1HImKs5Z07amPc2/yZxmvD/jdH9n1SFSu1Z4CN/wBK9/lT5a4n4j&#x2B;BrfxXpBMpZZoFZ0K9c46VjUTaZeGmqdVNnxHeKqTSFumeDWPqV8sURwe1aniJXt7y4hPybWK7T1FcVq1yyIVHp1rxWlex9jBppNEN/rBCcN2rrvBTw2OkrcXGPMm&#x2B;YfSuCtrRrycA8rVzxXqN3omjxy2x3RxcFT2FNbmzaR03ifxAktrJGhwvODXnMlz5u4k5qtdeJ4tUgRvOWPcuSuelc3q/iBrWIpZtG8g7seK31C&#x2B;hZ8SWarpksy5BBzWPpVwskPPpVe48YSanpzWpjyw4Yjv9Kr2MvlH0T0pMSdlc6ezUO3p71sWwWIqCck1gabPvXHYHrXRQbGKkkcc1JEpG7bWtxf8A2e0tU8y4lOxV9TXo/gn4cavpV0&#x2B;qX9nJZLaFQSw6sTgYrmfg9bnV/iBpKfw&#x2B;aGAHtX1n8QsweDLt1Gdssef&#x2B;&#x2B;q66NNXuzw8ViJQk4rY8a8VwyHUvtUsuXlibINcSLUxBixwzHjNdXrk0l3qRLnAEJwK52QG4wCfau&#x2B;1jznrqTwXzrDGPRQP0p/296zdjL8uDxxRhvQ1VkSfptQwyKBRnFQjoaurFeRKrToDGQehGKvOMjNQOgYc1XkedKPK7nwH8cdGfw9471RCpRXkMi56YNeUX/wA/Xqa&#x2B;sf2tvB/mfY9ZiTHBSRsdT2r5W8kNA4c/OvSvHr0&#x2B;WZ9PhKnPTOC1nx4nh93iQBrgdBWXL4k1TxJYMhBWN&#x2B;oNcf8AEpLmx1qSe1i82QtxnkVVtfEOvvZhZIRCR/dGARRGKsddnc5rx5BrPhqVHiDy27fxIc4rBtdc1i/i3iKTZjkkda6y98YXdk5W7s2kjXpkZBrFk8WmYO8FqUUnhcVqo9jXldiLR9Z1C0EjSRM31rY07x1DLKIJlKEnAz61Qt/FN15Z32StxgDb1rDkE&#x2B;q6kPtFqLU5ymBgmm4K2pjJuJ7toISaEMDkGtxeH2Z69K5/wfCINLhDHJC4rfidUyxOPeubrY0b0ue3/syaT9s8fxyBdy2sZO70NfTfxDiDeCr4N/z0T/0KvLv2T/CMlj4bu9cuIir3jbYiw/hFes/EOIt4Ku8DnzE/nXp0o&#x2B;6j5bET5qjPnnW4f&#x2B;Jk3p5TGuchBEgB4yK63WR/xMMBc5jYH8q5Mqxmj&#x2B;XGBiugi2g8rz2o2/SnG3kyeKPs8npQTc/SkdKQ9qUDApak6xjjioHPFWXHFV3Iwaa1OKpucd8S/CcXjLwnfaewy5UtH/vAcCvzu8V6VP4d1K6srgGOWNirA1&#x2B;nLH5h7V8Jftb6fFY/Ey6MaLEJI1Y4HU&#x2B;tYYiF43OzB1HGXKfNV/osV9qW6UBxnNW77R7MWiqY147iraQPJOZFG6rJ0ya4H3CR9K8m7R9KtTyzxI&#x2B;kJFiUYI4wK4lodHaUiGQjJ6V7jqfw3sr4PJcqQTXG6p8K9MiYNbuVb1zWyqFKb2Od0&#x2B;wsVUFF3EDIJpt3pUVzcJJsAZTwavSaFPpxVE&#x2B;ZR/EatC2YKu4c1EpNmM2aOkP9ktApPvXX&#x2B;B9G/wCEr8VaXpQbAuZwrD/ZzzXELOsCfN&#x2B;VeofsyRnUPjHoLPwu9iB&#x2B;FdEI3OKvNqDP0E0DRIPD&#x2B;jWmn2y7ILdAir/OqPjtP&#x2B;KOu/8Arov866QryTWD47wfBt36&#x2B;Yn867ovofNRfNN3PnTxENmpAdDz0rlHx9oXk5rr/FC41AE8fMa5KVdsqv2zya1eh1PaxYzRmm/aE/vCj7Qn94UGdj9Ix0paQHiq0&#x2B;oQwgkuMDrUpOWx0t2RYY5HSqV7cx2UEk0rBY0GWPtXm/i74o3Hh69VogJIC4Up6irHjXxJHqHhm6WJ8NPb7lwe5HSumNCW7OafvbF3Sviz4Z17U30&#x2B;31KFbpTjy2YAsfavkn9r4i7&#x2B;JEoRgSsKZ79q&#x2B;Yv&#x2B;Ei8S3PxtvtPtXktjFccShsbVz1r1fx/q11qV9511cNczCNUaVjycCuHEuysehhqDi&#x2B;Znn&#x2B;n6iLG8aCfhCeDXSxajGvzKwC4rjNVRZ1ZwQHHQ1hL4jmskMUjE4715jjzo9vmaO017Xwi7VbINchNqQbcc5NYd/wCJfN6tmqCazHtbc2DQqdhqehvPKJky2MnpVC8uEtELE5OOBWLdeJUiBEZLP0ArPimnvpfMmY7c8LWnLYzb5jRjklvpt7/Ko7V7R&#x2B;zdcpYfF7w&#x2B;7sqKX25PHUV5BbYiOa19J1ebSL63voZCk0LiRCOxFVSl72pz1o80HE/VuTUbVZCpnjU&#x2B;hasjx5Ir&#x2B;DLtkZXHmJyp4618XeHv2pWnureDUZFEpIUljjivZ7b4gbpJLEz7rG7RZDlshD1r1o0&#x2B;bVHhey5JamR4wjJdSBk7zXPyWwi0W6eRMOCpXNdP4nlgu0ja2uEkUHkg9ag8Q2qr4fuWUgKqJScWnqVLRHn3nL6ik85fUU3yH/u0eQ/92rMrn6Q6jrsFsjIrjdiuDu9Zmnicg7QH6&#x2B;teNr8Vbqwv2tNX3wTqcbm&#x2B;630rfh8ZLLGFEoKHng17dLDRpIXNJ6GjrVu2rWs4lKDk4PesmTU2sNMhtLg7kQbQe/NTT6tHs8xSHHXFYuo6nb3w2sPv9f8AZrdq6sG2p8tfE7Qh4T&#x2B;KsOtQxYt7sFZHHY9qzte1ITMTnIbmvYfiR4XbW7J42AkUAtG/oRXgOpCWHfFOpSSL5TXy2PouMrnt4WfPGxWnZWVjmub1C2WViAAa0ZbgjjPFVWkQufWvKvY9NxucjqFgIcsQaypY1Y5AIrstWsw4LA5yK5uS1Ck5yDRzGaiZYiVWBwKvQvjH1qLy1UnJFM89Yz2NF7hojXa52daZNf8A7v6CsmS/V3&#x2B;U5PpUF5frBAWY&#x2B;1OK94llLU2m1nXLO3tyTKZFLEHoM19Pwatc3Gn21nFkyFFVnB6ADFeL/DHwdLLM2p3C8yf6vI6CvcdGtBARgZ9TX0mGhK2p49aUXKx02nXL2VmIAxwF&#x2B;85roV8TJf6DdWk4/eMoCke1cfI25ggO4GrETqu1V7V0ShzHKyf5x6/nR8/v&#x2B;dSCUY60eaPUVy&#x2B;zZOh614us4/Fl2oKKwUde9cjrOi6z4SCvaTtLCBkxy9/bNdl4PifULjzGyEHJz3rZ8byw3CCEBSgTBFfQXT0Mjy7QviSl/L9nuGa0uk4Mb/0roX1oTHKcg9Wz1rkNV0KG7kMrxAsOMrwcVmtbanoieZZSPeW3eFuop8oXO4k1aRdyYDJ3U15x8QfBS6vBJqGmqDOv34D3HtWpYeNbS/l8libO4HBimGK0/PWRgyE&#x2B;wzXHWw6rRszanNwd0z5vv7GeGYo8bIwPKsMYrJuA0b5OQa&#x2B;hfE/hu01uJnkRY7ntIOhryDxD4Yk0&#x2B;5KyqR6EDg18niMJOlLyPdpV1NaM4&#x2B;8vW2HviuZvtRZJCMdq7G40guSo71j3Hhprh2whz0rj5VszpOPudTYZ7Vk3epMx4zXU654bNtbFtuCK5zSvDF5r14IrdD5QPzSHoBXRSpe00iRNqO5FbSz3LrHCrPKTgKvU16T4a&#x2B;HrXpin1QEdCIa3PCfgmz0RAVi82c9ZD1FdxBarARuOeM4r26OCSd5Hk1cRJ6ItaVYRWsCqP3cSjCgDpWql0oISIY46nvWJJqMcPEkgUDkLUK6vcTsVtocJ03tXqKHKrI4vi1Z1P22K2TzZJFVR3Y1k3HjASs0Wnp58hOPMxxWDdadcak6pPIWgzyAa3NO02O1iXYoVV7U1GwPYTfqLcm4IJ5Io3ah/z8mtIbaPl9qy0Mj3Oy1uSxsYooWG5qtanPm2DO29iOa/KAftlfGEEEeL&#x2B;nT/AIlln/8AGank/bX&#x2B;M8qbG8ZZX0/suy/&#x2B;M1Kx8OqZp7PufplPIHOAvFVmXyzuU81&#x2B;Zx/bI&#x2B;MBP/I3/wDlMs//AIzTf&#x2B;Gxfi8f&#x2B;Zu/8ptn/wDGabzCPRMfs&#x2B;x&#x2B;j2saFp2uL&#x2B;/iAlH3ZF4IrnrnQtU0AB7G6&#x2B;1Rrz5b9celfAA/bA&#x2B;Li5x4t6/9Q20/&#x2B;NUh/a/&#x2B;Lh6&#x2B;Lf8Aym2n/wAao/tCHZhyM&#x2B;/bXxbBczCC&#x2B;U2dwf8Alk3T8DUurQ2mpQeTMynP3XFfnNe/tJ/EfUbpbi48R&#x2B;ZMvRvsNsMfgI6sH9qP4nEAf8JN0/6cLX/41WEsXCS1RcU4bH6Bj4Kaje&#x2B;H59W0meLURCpZ7dfvgCvMJdVNpvWe1Cup5zxXzNoX7a3xn8NW88Gm&#x2B;Mvs0U4KyL/Zdk24H3aE1yN58fvHt/K8k&#x2B;veY7klj9jgGSevSOuNzoveJrGpUT1Z94aT8NI/Evhd9d1QmysGO2NSOZPpWXJo2laBbNDbKI4oxksepr4/b9rT4rt4fg0Q&#x2B;Ks6XBzHB/Z1p8v/AALyt361jXX7Qnj&#x2B;8DCbX94br/oVuP5R0UZ06OyJnOpPqfXjeObcSGK0s5biXs23FWYrvUtSTMmLdT2718YW/wAb/G1rJ5kWtbX6Z&#x2B;ywn/2SrY/aG&#x2B;IA/wCY/wD&#x2B;Sdv/APG67frsexkoyXU&#x2B;1bHSUfazs0rg9TW9HbYOGwAOmK&#x2B;Eov2kfiLCMJ4ix/2423/xupP&#x2B;GmfiVj/kZP8AyRtv/jdP68uwKLR92qAXwKtqAi5PIr4HH7THxJU5HiPn/rxtv/jdOP7TnxLYYPiX/wAkLb/43UvGRfQfKz718kHn196PIH&#x2B;TXwWP2nviYB/yMv8A5IW3/wAbo/4af&#x2B;Jn/Qy/&#x2B;SFt/wDGqj63HsR7Nn//2Q==" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="أمانة المنطقة الشرقية" readonly="">
+                                            <span>الأمانة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="بلدية وسط الدمام" readonly="">
+                                            <span>البلدية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="MOHAMMAD UBAID  KASIM" readonly="">
+                                            <span>الإسم</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" placeholder="" value="2575390139" readonly="">
+                                            <span>رقم الهوية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="ذكر" readonly="">
+                                            <span>الجنس</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="الهند" readonly="">
+                                            <span>الجنسية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="461219892580" readonly="">
+                                            <span>رقم الشهادة الصحية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="حلاق" readonly="">
+                                            <span>المهنة</span>
+                                        </label>
+                                    </div>
+                                           <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="1446/11/28" readonly="">
+                                            <span>تاريخ إصدار الشهادة الصحية هجري</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="2025/05/26" readonly="">
+                                            <span>تاريخ إصدار الشهادة الصحية ميلادي</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="1448/11/28" readonly="">
+                                            <span>تاريخ نهاية الشهادة الصحية هجري</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label">
+                    <input id="fldGregExpiry" class="form-control" type="text"  value="2027/05/05" readonly="">
+                                            <span>تاريخ نهاية الشهادة الصحية ميلادي</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" VALUE="حلاقة" readonly="">
+                                            <span>نوع البرنامج التثقيفى</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="1449/11/18" readonly="">
+                                            <span>تاريخ إنتهاء البرنامج التثقيفى</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="440410975990" readonly="">
+                                            <span>رقم الرخصة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="صالون بحيرة امواج للحلاقة الرجالية" readonly="">
+                                            <span>إسم المنشأة  </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label ">
+                                            <input class="form-control" type="text" value="7030632397" readonly="">
+                                            <span>رقم المنشأة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                    <div class="col-md-12 mt-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+</div>
+
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/jquery.min.js"></script>
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://services.balady.govsa.app/system/js/top-header.js"></script>
+<script>
+  if(window.BaladyTopHeader && BaladyTopHeader.mount){
+    BaladyTopHeader.mount({
+      target: "#baladyTopHeaderMount",
+      url: "https://services.balady.govsa.app/system/js/top-header.html"
+    });
+  }
+</script>
+
+<script src="https://services.balady.govsa.app/system/expiry-guard.js"></script>
+
+<div id="footerSlot"></div>
+<script src="https://services.balady.govsa.app/system/footer.js" defer></script>
+</body>
+</html>
