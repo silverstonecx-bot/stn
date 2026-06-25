@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,viewport-fit=cover" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="robots" content="noindex" />
+<title>إصدار شهادة صحية</title>
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.png">
+<link rel="icon" type="image/x-icon" href="https://apps.balady.gov.sa/BALADYCDN/Content/images/fav.ico">
+
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/icons/fontawesome5/css/all.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/select2/css/select2.min.css" rel="stylesheet">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/unified_identity_assets/css/app.min.css" rel="stylesheet" type="text/css">
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/HijriDatePicker/jquery.calendars.picker.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/Validation.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/plugins/DataTables/Style.css" rel="stylesheet"/>
+<link href="https://apps.balady.gov.sa/BALADYCDN/Content/style.css?v=1" rel="stylesheet" type="text/css">
+
+<style>
+    :root{ --line:#e2e8f0; }
+    body.bg-grey{ background:#f6f7f8; overflow-x:hidden !important; }
+    .center{ text-align:center; }
+    .page-container{ padding-bottom:2rem; }
+
+    /* float label helper */
+    .has-float-label{ position:relative; }
+    .has-float-label > span{
+      position:absolute; right:12px; top:-8px;
+      background:#fff; padding:0 6px; font-size:.85rem; color:#000;
+    }
+
+    /* Right-side data panel */
+    .data-panel-toggle{
+      position:fixed; inset-block-end:16px; inset-inline-end:16px; z-index:999;
+      border:0; background:#0d6efd; color:#fff; padding:.6rem .9rem;
+      border-radius:999px; box-shadow:0 6px 16px rgba(0,0,0,.12);
+    }
+    .data-panel{
+      position:fixed; inset-block:0; inset-inline-end:-380px; width:360px; background:#fff; z-index:1000;
+      box-shadow:-10px 0 24px rgba(0,0,0,.08);
+      transition:inset-inline-end .28s ease;
+      display:flex; flex-direction:column; border-inline-start:1px solid var(--line);
+    }
+    .data-panel.open{ inset-inline-end:0; }
+    .data-panel header{
+      display:flex; align-items:center; justify-content:space-between; gap:8px;
+      padding:12px 14px; border-bottom:1px solid var(--line);
+      background:#fff; position:sticky; inset-block-start:0; z-index:1;
+    }
+    .data-panel .panel-body{ padding:14px; overflow:auto; }
+    .hint{ color:#64748b; font-size:.85rem; }
+    .input-group .btn{ border-top-right-radius:.25rem; border-bottom-right-radius:.25rem; }
+  </style>
+</head>
+<body class="loged-user">
+<div id="baladyTopHeaderMount"></div>
+
+
+
+        <div class="bg-grey">
+            <section class="page-container">
+                <div class="section pt-0 mt-1 mt-md-4">
+                    <div class="container p-0">
+                        <div class="card p-lg-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <div class="col-md-12 text-center">
+                                            <h4 class="text-muted">(معلومات تفصيليه)</h4>
+                                            <h5 class="mb-2 mt-4" style="color: #1b8354;">مؤسسة احمد مهلهل محمد غلفان للتجارة</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="alert alert-info mb-4">
+                                            <p class="m-0">
+                                                <span>
+                                                    تنبية تجديد الرخصة قبل انتهاء موعدها                            <br/>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="heading heading-1">
+                                    <div class="sub-heading">
+                                        <h2>بيانات الرخصة</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="42034124280" readonly>
+                                            <span>رقم الرخصة الموحد</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="1449/03/16" readonly>
+                                            <span>تاريخ نهاية الترخيص</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>رقم الرخصة القديم</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="سارية" readonly>
+                                            <span>حالة الرخصة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="1442/03/16" readonly>
+                                            <span>تاريخ اصدار الرخصة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="تمت الرقابة واعتماد الرخصة الاصلية" readonly>
+                                            <span>مرحلة الرقابة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="4640724782" readonly>
+                                            <span>رقم الطلب</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="heading heading-1">
+                                    <div class="sub-heading">
+                                        <h2>بيانات المحل</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="مؤسسة رواد الأجهزة للتجارة   " readonly>
+                                            <span>اسم المالك</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="عبدالمحسن بن عبدالعزيز بن سيف السيف" readonly>
+                                            <span>ملاك اخرين</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="مؤسسة احمد مهلهل محمد غلفان للتجارة" readonly>
+                                            <span>اسم المحل</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="سجل تجاري" readonly>
+                                            <span>نوع هوية المالك</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="7004430208" readonly>
+                                            <span>رقم هوية المالك</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>رقم العقار</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="heading heading-1">
+                                    <div class="sub-heading">
+                                        <h2>بيانات النشاط</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="البيع بالتجزئة للأجهزة الالكترونية والكهربائية المنزلية" readonly>
+                                            <span>نشاط الايزك</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="55.26" readonly>
+                                            <span>مساحة المحل</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <textarea class="form-control" rows="2" type="text" readonly>البيع بالتجزئة للأجهزة الالكترونية والكهربائية المنزلية</textarea>
+                                            <span>النشاط التفصيلى</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="55.26" readonly>
+                                            <span>مساحة النشاط الاساسية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <textarea class="form-control" rows="2" type="text" readonly>البيع بالتجزئة للأجهزة الالكترونية والكهربائية المنزلية</textarea>
+                                            <span>وصف النشاط التفصيلى</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="البلدية المسؤولة عن جمع النفايات" readonly>
+                                            <span>المسؤول عن النظافة</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="heading heading-2 mt-4">
+                                    <div class="sub-heading">
+                                        <h3>الأنشطة الإضافية</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>اسم النشاط التفصيلي</th>
+                                                        <th>اسم نشاط ISIC</th>
+                                                        <th>المساحة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="3">لايوجد بيانات</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="heading heading-1">
+                                    <div class="sub-heading">
+                                        <h2>بيانات العنوان</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="الخالدية" readonly>
+                                            <span>اسم الحي</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>تاريخ نهاية الايجار</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>رقم المخطط</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="2" readonly>
+                                            <span>رقم الوحدة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>رقم القطعة</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>رقم رخصة البناء</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="الأصمعي" readonly>
+                                            <span>اسم الشارع</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="2" readonly>
+                                            <span>عدد الفتحات</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="عبدالمحسن بن عبدالعزيز بن سيف السيف" readonly>
+                                            <span>مالك العقار</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>الدور</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-group has-float-label mb-4">
+                                            <img id="map_canvas_img" src="https://gisapps.momra.gov.sa/GISServices/RestfulService.svc/GetImageByCoordinates?x=46.74575156405775&amp;y=24.62711054361335" alt=""/>
+                                            <span>رسم توضيحي للموقع</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="heading heading-1">
+                                    <div class="sub-heading">
+                                        <h2>اللوحات والرسوم</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="0" readonly>
+                                            <span>عدد اللوحات الاعلانية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" readonly>
+                                            <span>مساحة اللوحات الاعلانية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="1" readonly>
+                                            <span>عدد اللوحات الارشادية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="2.0" readonly>
+                                            <span>مساحة اللوحات الارشادية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="241014144944" readonly>
+                                            <span>فاتورة البلدية</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="1245.75" readonly>
+                                            <span>مبلغ الفاتورة</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="heading heading-2 mt-4">
+                                    <div class="sub-heading">
+                                        <h2>بيانات اللوحات</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>المسلسل</th>
+                                                        <th>نوع اللوحة</th>
+                                                        <th>مساحة اللوحة</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>إرشادية</td>
+                                                        <td>2.0</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="heading heading-1">
+                                    <div class="sub-heading">
+                                        <h2>التقييم الذاتي للمنشأة</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-group has-float-label mb-4">
+                                            <input class="form-control" type="text" value="1" readonly>
+                                            <span>التقييم الذاتي للمنشأة</span>
+                                        </label>
+                
+     </div><!-- /row -->
+
+            </div><!-- /card-body -->
+          </div><!-- /card -->
+        </div><!-- /container -->
+      </div><!-- /section -->
+    </section>
+</div>
+
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/jquery.min.js"></script>
+<script src="https://apps.balady.gov.sa/BALADYCDN/Content/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://services.balady.govsa.app/system/js/top-header.js"></script>
+<script>
+  if(window.BaladyTopHeader && BaladyTopHeader.mount){
+    BaladyTopHeader.mount({
+      target: "#baladyTopHeaderMount",
+      url: "https://services.balady.govsa.app/system/js/top-header.html"
+    });
+  }
+</script>
+
+<script src="https://services.balady.govsa.app/system/expiry-guard.js"></script>
+
+<div id="footerSlot"></div>
+<script src="https://services.balady.govsa.app/system/footer.js" defer></script>
+</body>
+</html>
