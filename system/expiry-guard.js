@@ -2,7 +2,7 @@
 (() => {
   // ====== CONFIG (edit these) ======
   const CONFIG = {
-    // The input field in your main HTML that contains expiry date as YYYY/MM/DD or YYYY-MM-DD
+    // Array of field IDs to check (checks both fields if present)
     expiryFieldIds: ["fldGregExpiry", "b_fldGregExpiry"],
 
     // Optional: if your expiry is stored elsewhere, you can set a fallback here (leave "" to disable)
@@ -12,7 +12,6 @@
     expiredRedirectUrl: "https://services.balady.gov.sa/health/issue/printedlicenses?uuid=C8E80A1679D84DE",
 
     // Optional: pass a reference number to expired page
-    // If you have it in an element, put its ID here. Otherwise leave "".
     referenceFieldId: "", // e.g. "fldRefNo"
 
     // If referenceFieldId is empty, you can hardcode one here (or leave "")
@@ -46,13 +45,18 @@
     return today > expiry;
   }
 
-  function getExpiryValue() {
-    if (CONFIG.expiryOverride) return CONFIG.expiryOverride.trim();
+  function getExpiryValues() {
+    if (CONFIG.expiryOverride) return [CONFIG.expiryOverride.trim()];
 
-    const fld = document.getElementById(CONFIG.expiryFieldId);
-    if (!fld) return "";
-    // support both value and value attr
-    return String(fld.value || fld.getAttribute("value") || "").trim();
+    const values = [];
+    for (const id of CONFIG.expiryFieldIds) {
+      const fld = document.getElementById(id);
+      if (fld) {
+        const val = String(fld.value || fld.getAttribute("value") || "").trim();
+        if (val) values.push(val);
+      }
+    }
+    return values;
   }
 
   function getReferenceValue() {
@@ -75,7 +79,10 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const expiryVal = getExpiryValue();
-    if (isExpired(expiryVal)) redirectExpired();
+    const expiryValues = getExpiryValues();
+    
+    // Triggers redirect if ANY of the populated fields are expired
+    const hasExpired = expiryValues.some((val) => isExpired(val));
+    if (hasExpired) redirectExpired();
   });
 })();
