@@ -3,7 +3,7 @@
   // ====== CONFIG (edit these) ======
   const CONFIG = {
     // The input field in your main HTML that contains expiry date as YYYY/MM/DD or YYYY-MM-DD
-    expiryFieldId: "fldGregExpiry",
+    expiryFieldIds: ["fldGregExpiry", "b_fldGregExpiry"],
 
     // Optional: if your expiry is stored elsewhere, you can set a fallback here (leave "" to disable)
     expiryOverride: "",
