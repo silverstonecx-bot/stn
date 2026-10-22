@@ -1518,7 +1518,7 @@
                                     </div>
                                     <div class="col-md-6" contenteditable="true">
                                         <label class="form-group has-float-label mb-4" contenteditable="true">
-                                            <input class="form-control" type="text" value="1072.65">
+                                            <input class="form-control" type="text" value="2572.65">
                                             <span contenteditable="true">مبلغ الفاتورة</span>
                                         </label>
                                     </div>
@@ -1553,26 +1553,114 @@
     </div>
 </div>
   </div>
-                                <div class="heading heading-1" contenteditable="true">
-                                    <div class="sub-heading" contenteditable="true">
-                                        <h2 contenteditable="true">التقييم الذاتي للمنشأة</h2>
-                                    </div>
-                                </div>
-                                <div class="row" contenteditable="true">
-                                    <div class="col-md-6" contenteditable="true">
-                                        <label class="form-group has-float-label mb-4" contenteditable="true">
-                                            <input class="form-control" type="text" value="1">
-                                            <span contenteditable="true">التقييم الذاتي للمنشأة</span>
-                                        </label>
-                
-     </div><!-- /row -->
+    <div class="heading heading-1">
+    <div class="sub-heading">
+        <h2> التصاريح السارية المرتبطة بالرخصة</h2>
+    </div>
+</div>
+    <div class="services-row service-row-list mt-4 cols-2">
 
-            </div><!-- /card-body -->
-          </div><!-- /card -->
-        </div><!-- /container -->
-      </div><!-- /section -->
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#permit_48277051967" aria-expanded="false" data-permit-type="1028" data-permit-id="48277051967">
+                    <div class="item-icon">
+                        <svg class="icon-back" viewBox="0 0 48 48" width="40" height="40">
+                            <use xlink:href="#svg-doc-check-ico"></use>
+                        </svg>
+                    </div>
+                    <div class="item-content">
+                        <h3>إصدار ترخيص فتح محل 24 ساعة</h3>
+                        <h4 class="service-number">48277051967</h4>
+                    </div>
+                    <span class="arrow-hover">
+                        <svg class="icon-back" viewBox="0 0 48 48" width="12" height="12">
+                            <use xlink:href="#svg-arrow-down-ico"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="card-body collapse" id="permit_48277051967">
+                    <div class="item-content">
+                        <div class="item-content-details">
+                            <div class="title">رقم التصريح</div>
+                            <div class="description">48277051967</div>
+                        </div>
+                        <div class="item-content-details">
+                            <div class="title">اسم التصريح</div>
+                            <div class="description">إصدار ترخيص فتح محل 24 ساعة</div>
+                        </div>
+                        <div class="item-content-details">
+                            <div class="title">تاريخ انتهاء التصريح</div>
+                            <div class="description">1449/03/28</div>
+                        </div>
 
-    </section>
+
+                        <div class="div-addational-info item-content-details w-100" style="display:none">
+                            <div class="title">البيانات الاضافية</div>
+                            <div class="permit-detail-container description mb-3"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+
+<script>
+    $(document).on('show.bs.collapse', '.card-body.collapse', function () {
+        var $container = $(this).find('.permit-detail-container');
+        if (!$container.length || $container.data('loaded')) return;
+
+        var $header = $(this).closest('.card').find('.card-header');
+        var permitType = $header.data('permit-type');
+        var permitId = $header.data('permit-id');
+
+        var urls = {
+         1013: '/commercial/inquiry/Qr/GetSidewalkOccupancy',
+         1042: '/commercial/inquiry/Qr/GetTemporaryAdvertising'
+        };
+
+        var url = urls[permitType];
+        var $additionalInfo = $(this).find('.div-addational-info');
+
+        if (!url || !permitId)
+        {
+            $container.data('loaded', true);
+            $additionalInfo.hide();
+            return;
+        }
+
+        $additionalInfo.show();
+        $container.data('loaded', true);
+        $container.html('<div class="text-center py-2"><span class="spinner-border spinner-border-sm" role="status"></span></div>');
+
+        $.get(url, { permitId: permitId })
+            .done(function (html) { $container.html(html); })
+            .fail(function () { $container.empty(); $container.data('loaded', false); });
+    });
+</script>
+
+
+
+                    
+    <div class="heading heading-1">
+        <div class="sub-heading">
+            <h2>التقييم الذاتي للمنشأة</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label class="form-group has-float-label mb-4">
+                <input class="form-control" type="text" value="1" readonly="">
+                <span>التقييم الذاتي للمنشأة</span>
+            </label>
+        </div>
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        
     
     
 </div>
